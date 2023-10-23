@@ -2,5 +2,9 @@
 
 大语言模型，笔记整理：
 
-- 为什么要使用 [cuda](./cuda/cuda.ipynb)，
+- 为什么要使用 [cuda](./cuda/cuda.ipynb)
+- 示意性的神经网络
+    - [简单的神经网络](./nn/1.simple-nn.ipynb)
+    - [识别手写阿拉伯数字的神经网络](./nn/2.mnist.ipynb)
+- 
 

@@ -15,4 +15,4 @@ ipython_config.py
 *.model
 simple_nn_model.npz
 lrm.out.png
-nn/data
+llm/nn/data

@@ -16,3 +16,5 @@ ipython_config.py
 simple_nn_model.npz
 lrm.out.png
 llm/nn/data
+.env
+

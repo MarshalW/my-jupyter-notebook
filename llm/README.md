@@ -9,4 +9,6 @@
 - 云端大模型
     - [智谱清言](./cloud/zhipu/README.md)
     - [百度千帆](./cloud/baidu/README.md)
+- 本地模型
+    - [使用 BERT 做情感分类](./local/bert/1.bert_simple.ipynb)
 

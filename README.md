@@ -5,7 +5,7 @@
 如下：
 
 - [大语言模型学习](./llm/README.md)
-- [中文问题的解决](./chinese/README.md)
+- [JupyterLab 使用总结](./jupyterlab/README.md)
 
 
 

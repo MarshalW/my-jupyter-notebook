@@ -8,4 +8,5 @@
     - [识别手写阿拉伯数字的神经网络](./nn/2.mnist.ipynb)
 - 云端大模型
     - [智谱清言](./cloud/zhipu/README.md)
+    - [百度千帆](./cloud/baidu/README.md)
 

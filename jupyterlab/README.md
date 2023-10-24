@@ -7,3 +7,4 @@
 - [嵌入视频](./video.ipynb)
 - [中文问题的解决](./chinese/README.md)
 - [笔记嵌入 bash 命令行执行](./bash.ipynb)
+- [怎样编辑 dotfiles ](./dotfiles.ipynb)

@@ -12,4 +12,5 @@
     - [百度千帆](./cloud/baidu/README.md)
 - 本地模型
     - [使用 BERT 做情感分类](./local/bert/1.bert_simple.ipynb)
+    - [使用 ChatGLM 实现文字聊天](./local/chatglm/1.examples.ipynb)
 

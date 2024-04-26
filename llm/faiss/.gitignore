@@ -1,0 +1,5 @@
+faiss-langchain_index
+*.pkl
+*.index
+output.csv
+

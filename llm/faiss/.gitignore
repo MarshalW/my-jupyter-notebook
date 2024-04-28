@@ -2,4 +2,5 @@ faiss-langchain_index
 *.pkl
 *.index
 output.csv
+faiss-langchain-llm_index
 

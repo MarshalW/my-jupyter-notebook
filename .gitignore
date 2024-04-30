@@ -18,3 +18,6 @@ lrm.out.png
 llm/nn/data
 .env
 
+
+__pycache__
+

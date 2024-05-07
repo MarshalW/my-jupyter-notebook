@@ -3,4 +3,5 @@ faiss-langchain_index
 *.index
 output.csv
 faiss-langchain-llm_index
+storage
 

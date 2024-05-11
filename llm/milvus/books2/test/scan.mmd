@@ -1,0 +1,1215 @@
+# Young Symmetry, the Flag Manifold, and Representations of \(\text{GL}(n)\)
+
+Jacob Towber
+
+DePaul University, Chicago, Illinois 60614
+
+Communicated by I. N. Herstein
+
+June 21, 1978
+
+###### Abstract
+
+It has long been known that all the finite-dimensional irreducible polynomial representations of \(GL(n)\) may be obtained by a simple and explicit construction which utilizes the coordinate ring of the flag manifold (cf. [4, 5, 6]. This suggests the following natural idea:
+
+1. Define the coordinate ring of the flag manifold by generators and relations over \(\mathbb{Z}\).
+2. Using the same description by generators and relations, associate a "flag algebra" \(\varLambda^{+}\!E\) to any module \(E\) over any commutative ring \(R\).
+
+The resulting "flag algebra" has a number of remarkable properties and applications, some of which are studied in the present paper; it was first defined and studied by the author in the earlier paper "Two New Functors from Modules to Algebras", _J. Algebra_**47** (1977), 80-104 [18] (which will be referred to as "Two functors" in the present paper).
+
+The above two-step program has recently been carried out by Glenn Lancaster and the present author, for the flag manifolds of all the classical groups (cf. [11, 19]); the constructions for these utilize the algebra \(\varLambda^{+}\!E\) associated with \(GL(n)\).
+
+To study the coordinate ring of the flag manifold, it is necessary to begin by considering carefully the equations of the flag manifold. In the characteristic 0 case, Hodge [6, 7] has given a generating set for the prime ideal of the flag manifold, consisting of the left sides of Eqs. (1) and (2) below. It is proved in the present paper (Proposition 3.2) that, for nonzero characteristic, (1) and (2) no longer generate in general this prime ideal (even though their zero locus is still the flag manifold). The literature seems to contain no generating set (proved to be such) for the flag manifold in general characteristic; in the present paper two quite distinct such generating sets are given, one in Section 2 (based on determinantal identities of Sylvester explained in Section 1) and the other in Section 5 (based on determinantal identities given by Turnbull in [20, Chap. III], which were later used by Hodge in studying the flag manifold).
+
+2011/4-462 (1979)
+
+## 1 Introduction
+
+It has long been known that all the finite-dimensional irreducible polynomial representations of \(GL(n)\) may be obtained by a simple and explicit construction which utilizes the coordinate ring of the flag manifold (cf. [4, 5, 6]. This suggests the following natural idea:
+
+1. Define the coordinate ring of the flag manifold by generators and relations over \(\mathbb{Z}\).
+2. Using the same description by generators and relations, associate a "flag algebra" \(\varLambda^{+}\!E\) to any module \(E\) over any commutative ring \(R\).
+
+The resulting "flag algebra" has a number of remarkable properties and applications, some of which are studied in the present paper; it was first defined and studied by the author in the earlier paper "Two New Functors from Modules to Algebras", _J. Algebra_**47** (1977), 80-104 [18] (which will be referred to as "Two functors" in the present paper).
+
+The above two-step program has recently been carried out by Glenn Lancaster and the present author, for the flag manifolds of all the classical groups (cf. [11, 19]); the constructions for these utilize the algebra \(\varLambda^{+}\!E\) associated with \(GL(n)\).
+
+To study the coordinate ring of the flag manifold, it is necessary to begin by considering carefully the equations of the flag manifold. In the characteristic 0 case, Hodge [6, 7] has given a generating set for the prime ideal of the flag manifold, consisting of the left sides of Eqs. (1) and (2) below. It is proved in the present paper (Proposition 3.2) that, for nonzero characteristic, (1) and (2) no longer generate in general this prime ideal (even though their zero locus is still the flag manifold). The literature seems to contain no generating set (proved to be such) for the flag manifold in general characteristic; in the present paper two quite distinct such generating sets are given, one in Section 2 (based on determinantal identities of Sylvester explained in Section 1) and the other in Section 5 (based on determinantal identities given by Turnbull in [20, Chap. III], which were later used by Hodge in studying the flag manifold).
+
+(See also [16], in which Musili derives generating sets in arbitrary characteristic for the prime ideals of the Grassmann and Schubert varieties, related to the generating set in Section 5 of the present paper).
+
+The finite-dimensional irreducible polynomial representations of \(GL(n)\) may also be obtained by a well-known construction, quite different in appearance, due to Weyl, where the representations are furnished by symmetry classes of tensors, whose definition utilizes certain idempotents, constructed by Young, in the group algebra of the symmetric group. In this connection, the present paper studies two concepts which appear to be new, "Young symmetry" and "Young alternation" of functions of several variables with range a \(\mathbb{Z}\)-module \(\mathcal{A}\); when \(\mathcal{A}\) is a \(\mathbb{Q}\)-module, these are the functions fixed by the action of the relevant Young idempotent. (The author sketched the second of these two concepts in "Two Functors," p. 82, and more recently in [19]; it was originally suggested to the author by the study of Carter and Lusztig [1, p. 211].) Some simple facts about these two concepts are obtained in Section 2, while in Section 4, properties of the flag manifold are used to prove these two less obvious facts:
+
+(a) In characteristic 0, "Young alternation" indeed means (as asserted above) "fixed by the relevant Young idempotent."
+
+(b) For any ring \(R\), the class of functions of \(n\) variables, with range an \(R\)-module, which have Young alternation with respect to a given partitioning of the variables, coincides with the class of such functions which are left annihilated, by the left annihilator in \(R[\mathbb{G}_{n}]\) of the relevant Young quasi-indempotent.
+
+If the two classical constructions mentioned above for the representations of \(GL(n)\) are carefully compared, a remarkable result is obtained which appears to be new, namely, that the coordinate ring of the flag manifold has some extra structure, consisting of a (graded) alternating multiplication defined naturally; this extra structure only arises in the characteristic 0 case, however. This operation was first defined (without proofs) in "Two Functors," p. 101; the relevant proofs are provided in the present paper, especially in Sections 6 and 7.
+
+In characteristic 0, it is well known what the generating set is, for the prime ideal of the flag manifold. We may break it up into two subsets, as follows. The first subset consists of the left sides of the following well-known quadratic relations, satisfied by the Plucker coordinates \(\pi\left(i_{1},...,i_{p}\right)\) of a \((p-1)\)-dimensional linear subspace \(L^{p-1}\) of projective \((n-1)\)-space \(P^{n-1}\),
+
+\[\sum_{s=0}^{p}\ (-1)^{s}\pi(i_{1}\,...,\ i_{p-1}\,j_{s})\ \pi(j_{0}\,...,j_{s}\ \cdots j_{p})=0 \tag{1}\]
+
+(all \(i\)'s and \(j\)'s between 1 and \(n\)). The second subset arises from the necessary and sufficient conditions
+
+\[\sum_{s=0}^{p}\ (-1)^{s}\pi(i_{1}\,...,i_{q-1}\,j_{s})\ \pi(j_{0}\,...,j_{s}\ \cdots j_{p})=0 \tag{2}\](all \(i\)'s and \(j\)'s between \(1\) and \(n\)) that a \((q-1)\)-dimensional linear subspace \(L^{q-1}\) of \(P^{n-1}\) (\(q<p\)) with Plucker coordinates \(\pi\) (\(i_{1},...,i_{q}\)) be a subspace of the preceding \(L^{p-1}\).
+
+How messy are (1) and (2)? They are quadratic equations with all coefficients \(0\), \(1\), or \(-1\); whatever complexity they have is thus of a _combinatorial_ nature, involving interchanges among the indices \(i_{1},...,i_{q-1}\), \(j_{0}\),..., \(j_{p}\) (\(q\leq p\)). Indeed, Eqs. (1) and (2), as well as the "extra" equations obtained in Theorem 3.1, assert precisely that \(\pi\)(\(i_{1}\),..., \(i_{q-1}\),\(j_{0}\)) \(\pi\)(\(j_{1}\),..., \(j_{p}\)) has certain symmetry properties, considered as a function of its indices; these are indeed precisely the symmetry conditions studied in Section 2.
+
+It is this observation (which appears to be new, and which is formulated more precisely as Corollary 3 to Theorem 3.1 below) which furnishes the basic connection between the flag manifold and "Young symmetry," and thus between the two classical constructions of the irreducible representations of the general linear group (that of Young-Weyl via "quantics" and that of DeRuyts-Littlewood-Hodge via "connexes").
+
+An important extension of these constructions was initiated in [5] by Higman; utilizing the coordinate ring of the flag manifold, he constructed functors of vector spaces \(V\), here denoted by \(\Lambda^{a_{1},...,a_{s}}V\), which yield the absolutely irreducible representations of \(\operatorname{Aut}(V)\) (when the ground field has characteristic \(0\)) via the homomorphism
+
+\[\operatorname{Aut}(V)\to\operatorname{Aut}(\Lambda^{a_{1},...,a_{s}}V),\qquad T \mapsto\Lambda^{a_{2},...,a_{s}}T.\]
+
+A different version of these functors (naturally isomorphic to those of Higman in the characteristic \(0\) case) was given by Epstein in [2], based on the Young-Weyl construction; Carter and Lusztig gave what seem to be the correct generalization of Epstein's functors, at least in the case of finitely generated projective modules over arbitrary commutative rings. In "Two Functors" the present author refined these two constructions in the following ways (some of which are further developed in the present paper):
+
+(i) Utilizing (without proof) some of the results proved in the present paper, Higman's construction was extended to arbitrary modules over arbitrary commutative rings
+
+(ii) It is immediate from his construction itself, that the functors constructed by Higman form the graded pieces of a commutative associative algebra; it is far from obvious that the same is true for the Carter-Lusztig functors, but in [18] it is shown how to put the structure of an associative graded anticommutative algebra, in a functorial way, on the direct sum of the Carter-Lusztig functors. More precisely, this structure is placed on the direct sum of _certain_ functors, whose identity with the Carter-Lusztig functors is obtained in Section 6 of the present paper.
+
+(iii) It is proved that the generalization of the Higman functors and the Carter-Lusztig functors stand in a relation of _duality_.
+
+Let us finally note, on p. 81 of "Two Functors," the suggestion that these functors should prove useful in obtaining a free resolution of the ideal of \(\p\times\p\) minors of a matrix with indeterminate entries; this possible area of application has recently attracted the attention of a number of researchers to these functors, including Buchsbaum, Eisenbud, Procesi, and others. In this connection should also be mentioned Alain Lascoux, who in his thesis has given a different construction for these functors [12] and has applied them to the above-mentioned problem of resolving the ideal of \(\p\times\p\) minors; he has been kind enough to notify the author, in writing, that he had seen "Two Functors" prior to the completion of his thesis.
+
+Some recent work of James ([9]_et al._) is also of interest in the present connection, as is the work of Liulevicius in [15].
+
+Appendix 1 concerns a combinatorial result, which played an important role in [18]. The author had originally planned to include this proof in [18], but inquiries made at that time seemed to indicate such a result was already in the literature, which (except for the well-known special case when the tableau has no repetitions; cf. Boerner) thefuthor no longer considers to be the case; the author now believes he may claim this result as original.
+
+## 1. Sylvester's Theorem
+
+In [17], Sylvester proved the following remarkable property of determinants:
+
+Let us denote by \([a_{1}\cdots a_{n}]\) the \(n\times n\) determinant whose \(i\)th column is \(a_{i}\); then
+
+\[[a_{1}\cdots a_{n}][b_{1}\cdots b_{n}] \tag{3}\]
+
+remains unchanged in value, if we interchange \(b_{1}\) with each of \(a_{1}\),..., \(a_{n}\) in turn, and then add:
+
+\[[a_{1}\cdots a_{n}][b_{1}\cdots b_{n}]=\sum_{i=1}^{n}\ [a_{1}\cdots a_{i-1}b_{1}a_{i-1} \cdots a_{n}][a_{i}b_{2}\cdots b_{n}]. \tag{4}\]
+
+More generally, he showed that, for \(j_{1}\),..., \(j_{r}\) any distinct integers between 1 and \(n\), expression (3) remains unchanged in value if, for all \((n\choose r)\) choices of \(i_{1}<\cdots<i_{r}\) between 1 and \(n\), we interchange \(a_{i_{1}}\) with \(b_{j_{1}}\), \(a_{i_{k}}\) with \(b_{j_{2}}\),..., \(a_{i_{r}}\) with \(b_{j_{r}}\) in (3), and then add the \((n\choose r)\) results.
+
+Example. With \(n=3,j_{1}=2,j_{2}=3\), we have
+
+\[[a_{1}a_{2}a_{3}][b_{1}b_{2}b_{3}]=[b_{3}b_{3}a_{3}][b_{1}a_{1}a_{2}]+[b_{3} a_{2}b_{3}][b_{1}a_{1}a_{3}]+[a_{1}b_{2}b_{3}][b_{1}a_{2}a_{3}].\]Sylvester's theorem, and his original proof, remain valid when the entries in the \(a\)'s and \(b\)'s lie in any commutative ring \(R\). Here is a quick proof of (4): The expression
+
+\[[a_{1}\cdots a_{n}][b_{1}\cdots b_{n}]-\sum_{i=1}^{n}\,[a_{1}\cdots a_{i-1}b_{1 }a_{i+1}\cdots a_{n}][a_{i}b_{2}\cdots b_{n}]\]
+
+is an \(R\)-multilinear function of the variables \(a_{1}\,,...,\,b_{n}\,,\) all ranging over \(R^{n}\), which is alternating in the \(n+1\) variables \(a_{1}\,,...,\,a_{n}\,,\,b_{1}\,.\) Any such function must be \(0\). (The second half of Sylvester's theorem will be deduced from (4) in the next section; see Corollary 2 to Proposition 2.2.)
+
+The quadratic relations (1) for the Grassmann manifold, given in the Introduction, are immediate consequences of (4). Indeed, suppose the linear subspace \(L^{p-1}\) of projective \((n-1)\)-space is spanned by \(p\) points whose coordinates are given, respectively, by the rows of the \(p\,\times\,n\) matrix \(E\) with \(i\)th column \(e_{i}\); then the Plucker coordinates of \(L^{p-1}\) are given by
+
+\[\pi(i_{1}\,,...,\,i_{r})=[e_{i_{1}}\cdots e_{i_{r}}],\]
+
+and applying (4) to \([e_{i_{2}}\cdots e_{i_{r}}][e_{i_{2}}e_{i_{1}}\cdots e_{i_{r-1}}]\), it is readily seen that we obtain (1). Similarly, we may deduce (2) from (4): If \(L^{q-1}\) is a \(q\)-dimensional subspace of \(L^{p-1}\), we may choose the above matrix \(E\) so \(L^{q-1}\) is generated by points whose coordinates are given by the first \(q\) rows of \(E\), whence the Plucker coordinate \(\pi(i_{1}\,,...,\,i_{q})\) of \(L^{q-1}\) is the \(q\,\times\,q\) subdeterminant of \(E\) formed by the first \(q\) rows and by columns \(i_{1}\,,...,\,i_{q}\); then, applying (4) to
+
+\[[e_{i_{1}}\cdots e_{i_{p}}][e_{i_{q}}e_{i_{1}}\cdots e_{i_{q-1}}\delta_{q+1} \cdots\delta_{q}]\]
+
+(where \(\delta_{i}\) is the column of length \(p\) with \(1\) in the \(i\)th place and \(0\)'s elsewhere) we obtain (2).
+
+The second part of Sylvester's theorem yields, in a similar way, additional equations satisfied on the flag manifold; we shall see in Section 3 that these are precisely the "extra' equations mentioned in the Introduction, which together with (1) and (2) generate the prime ideal of the flag manifold (over any ground field).
+
+We next proceed to abstract the symmetry properties asserted of expression (3) by Sylvester's theorem.
+
+## 2. Symmetry Properties of Functions of Several Variables
+
+It is desirable to be able to rewrite (4) in the form
+
+\[[a_{1}\,,...,\,a_{n}][b_{1}\,,...,\,b_{n}]=\sum_{i=1}^{n}\,(a_{i}b_{1})\circ [a_{1}\,,...,\,a_{n}][b_{1}\,,...,\,b_{n}],\]where \(\circ\) denotes the action of the symmetric group, on the \(2n\) symbols \(a_{1}\) through \(b_{n}\), upon functions of those variables.
+
+Let us now proceed to clarify the concepts involved in the notation (5). If \(E\) is any set, we denote by \(S(E)\) the group of bijections of \(E\); our convention will be to write functions on the _left_ of elements, so that for \(\alpha\) and \(\beta\) in \(S(E)\), \(\alpha\beta\) is the result of applying first \(\beta\) and then \(\alpha\). We wish to regard \(S(E)\) as acting upon functions
+
+\[f(\{X_{i}\}_{i\in E})\]
+
+of \(E\)-indexed variables, all of which have the same domain of definition, say \(D\). To be precise:
+
+By a _function of \(E\)-indexed variables, with common domain \(D\)_, taking values in \(T\) (where \(E\), \(D\), \(T\) are any sets), will be meant an element of
+
+\[T^{(D^{E})}\]
+
+(where as usual \(D^{E}\) means the set of maps \(E\to D\)), i.e., a map \(f\) assigning to each
+
+\[E\to D,\qquad i\mapsto X_{i}\in D\]
+
+an element \(f(\{X_{i}\}_{i\in E})\) in \(T\). Of course, if \(E=\{1,...,\,n\}\), we recover the usual notion of a function \(f(X_{1}\),..., \(X_{n})\) of \(n\) variables.
+
+There is a natural _left_ action of \(S(E)\) on such functions, defined as follows: if \(f\in T^{(D^{E})}\), \(\pi\in S(E)\) then \(\pi\circ f\in T^{(D^{E})}\) is defined by \((\pi\circ f)(E\rightarrow^{X}D)=f(X\circ\pi)\) or equivalently by \((\pi\circ f)(\{X_{i}\}_{i\in E})=f(\{X_{i}\}_{i\in E})\) with \(Y_{i}=X_{\pi i}\) (all \(X_{i}\) in \(D\)). (One may verify that this is a left action, either by a direct computation, or by noting that \(T^{(D^{E})}\) is a covariant functor of \(E\)). If \(T\) has the structure of an Abelian group, or module over a commutative ring \(R\), this action extends in the usual way to a left action of the group algebra \(\mathbb{Z}[S(E)]\) or \(R[S(E)]\), respectively.
+
+With these conventions (5) now makes sense, taking the indexing set \(E\) to consist of the variable symbols \(a_{1}\),..., \(b_{n}\), taking \(T\) to be the ground ring \(R\), and taking the common domain \(D\) to consist of columns of length \(n\) over \(R\). Note that we are, as usual, free to regard (4) at will, either as an equation (equivalent to (5)) between two functions of \(2n\) variables, or as an identity holding for all \(a_{1}\),..., \(b_{n}\) in \(D\). Note also that the second part of Sylvester's theorem may now be written
+
+\[[a_{1}\ \cdots\ a_{n}][b_{1}\ \cdots\ b_{n}]\ =\ \sum_{i<i_{1}<\cdots<i_{r}<n} \ (a_{i_{1}}b_{i_{2}})\ \cdots\ (a_{i_{r}}b_{i_{r}})\circ[a_{1}\ \cdots\ a_{n}][b_{1}\ \cdots\ b_{n}].\]
+
+Throughout the remainder of this section, \(E\) and \(D\) will denote fixed sets, (\(A\), \(+\)) a fixed abelian group, and \(f\in A^{(D^{E})}\) a function of \(E\)-indexed variables with common domain \(D\), taking values in \(A\). We shall denote the cardinality of any set \(U\) by \(\#U\). We assume throughout that \(E\) is finite.
+
+**Definition 2.1**.: Let \(U\) be any subset of \(E\). We say \(f\) is _symmetric in_\(U\) if \((jk)\circ f=f\) for all distinct \(j\) and \(k\) in \(U\). We say \(f\) is _alternating in_\(U\) if, for all distinct \(j\) and \(k\) in \(U\),
+
+\[f(\{X_{i}\}_{i\in E})=0\qquad\mbox{if}\quad X_{j}=X_{k}\,,\quad\mbox{and}\quad( jk)\circ f=-f.\]
+
+_Note._ In particular, \(f\) is both symmetric and alternating in \(U\) if \(\#U=0\) or \(1\). If \(f\) is symmetric (or alternating) in \(U\), it is such for each subset of \(U\).
+
+**Definition 2.2**.: Let
+
+\[U=\{u_{1}\,,...,u_{n}\},\qquad V=\{v_{1}\,,...,v_{n}\} \tag{6}\]
+
+be disjoint subsets of \(E\) with the same cardinality \(n\); assume that \(f\) is either symmetric, in \(U\) and in \(V\), or alternating in \(U\) and in \(V\). Then by
+
+\[\mbox{Int}(U,\,V)f,\]
+
+_the result of interchanging \(U\) and \(V\) in \(f\), will be meant_
+
+\[(u_{1}v_{1})\,\cdots\,(u_{n}v_{n})\circ f\]
+
+_(and will be meant \(f\), if \(U\) and \(V\) are empty)._
+
+_Note._\(\mbox{Int}(U,\,V)f\) is independent of the particular choice (6) of orderings for \(U\) and \(V\), as the following computation suffices to show:
+
+Let \(\epsilon\) denote \(+1\) or \(-1\), according as \(f\) is symmetric or alternating in both \(U\) and \(V\); then
+
+\[(u_{1}v_{2})(u_{2}v_{1})\,\circ f=(u_{1}v_{1})(u_{2}v_{2})(u_{1}u_{2})(v_{1}v_ {2})\,\circ f=\epsilon^{2}(u_{1}v_{1})(u_{2}v_{2})\,\circ f\]
+
+whence
+
+\[(u_{1}v_{2})(u_{2}v_{1})(u_{2}v_{2})\,\cdots\,(u_{n}v_{n})\,\circ f=(u_{1}v_{ 1})(u_{2}v_{2})(u_{3}v_{3})\,\cdots\,(u_{n}v_{n})\,\circ f.\]
+
+**Definition 2.3**.: Let \(U\), \(V\) be disjoint subsets of \(E\), and let \(f\) be alternating in \(U\) and in \(V\). We say \(f\) is _symmetric from_\(V\) to \(U\) if
+
+\[f=\sum_{\stackrel{{ U_{1}\subseteq U}}{{\neq U_{1}=\neq V}}} \mbox{Int}(U_{1}\,,\,V)f\]
+
+and that \(f\)_has Young symmetry from_\(V\)_to_\(U\) if \(f\) is symmetric from each subset of \(V\) to \(U\).
+
+_Remark._ Adopting the usual convention that a sum indexed by an empty set is \(0\), we see that, if \(\#V>\#U,f\) is only symmetric from \(V\) to \(U\) when \(f=0\). Thus, this concept is only interesting when \(\#V\leq\#U\).
+
+**Example 2.1**.: Sylvester's theorem asserts precisely that the function
+
+\[f=[a_{1}\ \cdots\ a_{n}][b_{1}\ \cdots\ b_{n}]\]
+
+has Young symmetry from \(\{b_{1}\,...,\ b_{n}\}\) to \(\{a_{1}\,...,\ a_{n}\}\).
+
+**Example 2.2**.: Let \(\parallel X_{ij}\parallel\) be an \(n\times n\) matrix over a commutative ring \(R\), and let \(\pi(j_{1},...,j_{p})\) denote the subdeterminant of this matrix formed from the first \(p\) rows and the \(j_{1}\,...,j_{p}\) columns; then if \(p\geq q\), the function
+
+\[\pi(J_{1}\,...,J_{p})\ \pi(K_{1}\,...,\ K_{q})\]
+
+of variables indexed by \(E=\{J_{1}\,...,\ K_{q}\}\) with common domain \(D=\{1,...,\ n\}\), taking values in \(R\), has Young symmetry from \(\{K_{1}\,...,\ K_{q}\}\) to \(\{J_{1}\,...,\ J_{p}\}\).
+
+_Proof_. Apply Sylvester's theorem to the following product of \(p\times p\) determinants:
+
+\[\left|\begin{array}{c}X_{1,i_{1}}\ \cdots\ X_{1,i_{p}}\\ \vdots\\ X_{p,j_{1}}\ \cdots\ X_{p,j_{p}}\end{array}\right|\cdot\left|\begin{array}{c}X_{1,i_ {1}}\ \cdots\ X_{1,i_{q}}\ \ 0^{\prime}\mbox{s}\\ \vdots\\ X_{p,j_{1}}\ \cdots\ X_{p,j_{q}}\ \ \ I_{p-q}\end{array}\right|\]
+
+(cf. derivation of 2) in Section 1).
+
+_Remark_. The assertion of Example 2.2 amounts to a number of equations between \(E\)-indexed functions; for example,
+
+\[\pi(J_{1}J_{2}J_{3})\ \pi(K_{1}K_{2})=\sum_{1<j_{1}<j_{2}<3}\ (J_{1}K_{1})(J_{1 }K_{2})\circ\pi(J_{1}J_{2}J_{3})\ \pi(K_{1}K_{2}).\]
+
+This in turn amounts to \(n^{5}\) equations between elements of \(R\), obtained by applying both sides to "specializations"
+
+\[E\to D,\ J_{1}\mapsto j_{1}\,...,\ K_{2}\mapsto k_{2}\qquad(j\mbox{'s and $k$'s in $D=\{1,..., $n\}$}),\]
+
+and by an abuse of notation which will sometimes be convenient, these \(n^{5}\) resulting equations will be indicated by
+
+\[\pi(j_{1}j_{2}j_{3})\ \pi(k_{1}k_{2})=\sum_{1<j_{1}<j_{2}<3}\ (j_{1}k_{1})(j_{1 }k_{2})\circ\pi(j_{1}j_{2}j_{3})\ \pi(k_{1}k_{2})\]
+
+(\(j\)'s and \(k\)'s between 1 and \(n\)) which is equivalent to
+
+\[\pi(j_{1}j_{2}j_{3})\ \pi(k_{1}k_{2})=\pi(k_{1}k_{2}j_{3})\ \pi(j_{1}j_{2})+\pi(k_{1}j_{2}k_{2})\ \pi(j_{1}j_{3})+\pi(j_{1}k_{1}k_{2})\ \pi(j_{2}j_{3}).\]
+
+**Example 2.3**.: The Riemann-Christoffel tensor \(R_{ijk}\) satisfies:
+
+\[R_{ijk}=-R_{ijk}=-R_{ijlk}=R_{klij}\]
+
+and
+
+\[R_{ijk}=R_{hjkl}+R_{ijki};\]
+
+these relations assert precisely that \(R_{ijk}\), considered as a function of its indices, has Young symmetry from \(\{i,j\}\) to \(\{k,I\}\).
+
+**Proposition 2.1**.: _Let \(f\) be alternating in each of two disjoint subsets \(U\) and \(V\) of \(E\); let \(V_{1}\subseteq V\), \(\#V_{1}=r\). If \(f\) is symmetric from \(V_{1}\) to \(U\), then \(f\) is symmetric from every subset of \(V\) with \(r\) elements to \(U\)._
+
+_Proof_. It suffices to show that if \(f(X_{1},...,\,X_{p};\,Y_{1},...,\,Y_{q})\) is a function of \(\dot{p}\,+\,q\) variables, with common domain \(D\), taking values in \(A\), which is alternating in the \(X\)'s and in the \(Y\)'s, and satisfies
+
+\[f=\sum_{1<i_{1}<\cdots<i_{r}<p}(X_{i_{1}}Y_{1})\,\cdots\,(X_{i_{r}}Y_{r})\, \circ f \tag{7}\]
+
+then \(f\) also satisfies
+
+\[f=\sum_{1<i_{1}<\cdots<i_{r}<p}(X_{i_{1}}Y_{i_{1}})\,\cdots\,(X_{i_{r}}Y_{i_{ r}})\,\circ f\]
+
+for all distinct \(j_{1}\),\(...,j_{r}\) between \(1\) and \(q\). Indeed, letting \(\pi\) denote any permutation of
+
+\[E=\{X_{1}\,,...,\,X_{p}\,,\,Y_{1}\,,...,\,Y_{q}\}\]
+
+which fixes the \(X\)'s and maps \(Y_{\ell}\) into \(Y_{j_{\ell}}\) for \(1\leqslant i\leqslant r\), and operating on both sides of (7) with \(\pi\,\circ\), we obtain:
+
+\[(\mbox{sgn }\pi)f =\pi\,\circ f=\sum_{i}\,\pi(X_{i_{1}}Y_{1})\,\cdots\,(X_{i_{r}}Y_{ r})\,\circ f\] \[=(\mbox{sgn }\pi)\sum_{i}\,\pi(X_{i_{1}}Y_{1})\,\cdots\,(X_{i_{r}}Y_{ r})\,\pi^{-1}\,\circ f\] \[=(\mbox{sgn }\pi)\sum_{i}\,(X_{i_{1}}Y_{i_{1}})\,\cdots\,(X_{i_{r}}Y_{ i_{r}})\,\circ f.\]
+
+**Proposition 2.2**.: _Let \(f\) be alternating in the disjoint subsets \(U\) and \(V\) of \(E\); let \(v\in V\). If \(f\) is symmetric from \(V\,-\,\{v\}\) to \(U\) and from \(\{v\}\) to \(U\), and if \(\#V\) is not a zero divisor on \(A\), then \(f\) is symmetric from \(V\) to \(U\)._
+
+_Proof_. Pick orderings
+
+\[U=\{u_{1}\,,...,\,u_{m}\},\qquad V-\{v\}=\{v_{1}\,,...,\,v_{n}\}.\]By hypothesis, we have
+
+\[f=\sum_{s=1}^{m}\,(u_{s}v)\circ f. \tag{8}\]
+
+Let \(U^{\prime}=\{u_{i_{1}},...,\,u_{i_{s}}\}\) be any \(n\)-element subset of \(U.\) Applying \((u_{i_{1}}v_{1})\,\cdots\,(u_{i_{n}}v_{n})\,\circ\) to both sides of (8), and noting that, for \(1\,\leqslant\,t\,\leqslant\,n\),
+
+\[(u_{i_{t}}v_{t})(u_{i_{t}}v)\,=\,(vv_{t})(u_{i_{t}}v_{t})\]
+
+we obtain
+
+\[\mbox{Int}(U^{\prime},\,V-\{v\})f=(u_{i_{1}}v_{1})\,\cdots\,(u_{i_{n}}v_{n}) \circ\sum_{s=1}^{m}\,(u_{s}v)f\]
+
+\[=\sum_{\begin{subarray}{c}1\,\leqslant\,s\leqslant m\\ s\neq i_{1},...,i_{n}\end{subarray}}\mbox{Int}(U^{\prime}U\{u_{s}\},\,V)f+ \sum_{i=1}^{n}\,(vv_{t})\circ\mbox{Int}(U^{\prime},\,V-\{v\})f.\]
+
+Summing this over all \(n\)-element subsets \(U^{\prime}\) of \(U,\) and recalling that \(f\) is symmetric from \(V-\{v\}\) to \(U\) (so the left side sums of \(f\)) we obtain
+
+\[f=(n+1)\,\sum_{\begin{subarray}{c}U_{1}\,\subseteq\,U\\ \neq\,U_{1}=n+1\end{subarray}}\mbox{Int}(U_{1}\,,\,V)f+\sum_{i=1}^{n}\,(vv_{t} )\,\circ f=(n+1)\sum_{\overline{U_{1}}}\mbox{Int}(U_{1}\,,\,V)f-n\!f\] \[(n+1)f=(n+1)\,\sum_{\begin{subarray}{c}U_{1}\,\subseteq\,U\\ \neq\,U_{1}=n+1\end{subarray}}\mbox{Int}(U_{1}\,,\,V)f.\]
+
+Since \(n+1=\#V\) is a nonzero divisor on \(A\), we conclude that \(f\) is symmetric from \(V\) to \(U.\)
+
+**Corollary 1**: _Let \(f\) be alternating in each of two disjoints subsets \(U\) and \(V\) of \(E.\) Suppose \(A\) is torsion-free. If \(f\) is symmetric from \(\{v\}\) to \(U\) for some element \(v\) in \(V,\) then either \(f=0,\) or else: \(\#U\,\geqslant\,\#V\) and \(f\) has Young symmetry from \(V\) to \(U.\)_
+
+_Proof_. Immediate from the two preceding propositions.
+
+_Note_. It suffices to assume \((\#V)!\) is not a zero divisor on \(A.\)
+
+_Remarks_. The conditions in the hypothesis of Corollary 1 are known to physicists as "Fock's cyclic symmetry conditions" (cf. [3]).
+
+**Corollary 2** (Sylvester's theorem): _Let \(R\) be a commutative ring; then \((\)with notation as in Section 1\()\) the function_
+
+\[f=[a_{1}\,,...,\,a_{n}][b_{1}\,,...,\,b_{n}]\]
+
+[MISSING_PAGE_FAIL:11]
+
+Let \(U=\{1,\,2\}\), \(V=\{3,\,4,\,5\}\). \(g\) is alternating in \(U\) and in \(V\), but is not symmetric from \(U\) to \(V\), since
+
+\[1=g(1,\,2,\,3,\,4,\,5)\neq g(3,\,4,\,1,\,2,\,5)+g(3,\,5,\,1,\,4,\,2)+g(4,\,5,\,3, \,1,\,2)=0. \tag{11}\]
+
+However, we claim \(g\) does have symmetry from \(\{1\}\) to \(V\), i.e., satisfies
+
+\[g(x_{1}x_{2}x_{3}x_{4}x_{5})=g(x_{3}x_{2}x_{1}x_{4}x_{5})+g(x_{4}x_{2}x_{3}x_{1 }x_{5})+g(x_{5}x_{2}x_{3}x_{4}x_{1}). \tag{12}\]
+
+This is clear if two \(x\)'s are equal. If the \(x\)'s are all distinct, there are three cases to consider:
+
+1. _Neither \(x_{1}\) nor \(x_{2}\) equals 5_. Without loss of generality, we may assume \(x_{5}=5\); then (12) reduces to (9), since in this case \(g(x_{1}x_{2}x_{3}x_{4}x_{5})=f(x_{1}x_{2}x_{3}x_{4})\).
+2. \(x_{2}=5\). Here, both sides of (12) are 0.
+3. \(x_{1}=5\). Here (12) becomes (using the fact \(f\) is alternating, hence symmetric in \(U\) and \(V\))
+
+\[0\,=f(x_{2}x_{3}x_{4}x_{5})+f(x_{2}x_{4}x_{3}x_{5})+f(x_{2}x_{5}x_{3}x_{4})\]
+
+which is one of Eqs. (10).
+
+**Proposition 2.3**.: _Let \(f\) be alternating in each of two disjoint subsets \(U\) and \(V\) of \(E\), with \(\#U=\#V\). If \(f\) has Young symmetry from \(V\) to \(U\), then \(f\) has Young symmetry from \(U\) to \(V\)._
+
+_Proof._ We may assume
+
+\[f=f(X_{1}\,,...,\,X_{n}\,,\,Y_{1}\,,...,\,Y_{n})\]
+
+with \(U=\{X_{1}\,,...,\,X_{n}\}\), \(V=\{Y_{1}\,,...,\,Y_{n}\}\), and are then given that \(f\) is alternating in the \(X\)'s and in the \(Y\)'s, and that
+
+\[f=\sum_{1\leq i_{1}<\cdots<i_{r}\leq n}\,(X_{i_{1}}Y_{i_{1}})\,\cdots\,(X_{i_ {r}}Y_{i_{r}})\,\circ f \tag{13}\]
+
+if \(1\,\leq r\,\leq n\) and \(j_{1}\,,...,j_{r}\) are distinct integers between 1 and \(n\). Applying (13) with \(r\,=n\) we see that
+
+\[f(X_{1}\,,...,\,X_{n}\,,\,Y_{1}\,,...,\,Y_{n})=f(Y_{1}\,,...,\,Y_{n}\,,\,X_{ 1}\,,...,\,X_{n})\]
+
+and using this to interchange \(X\)'s and \(Y\)'s in (13) yields
+
+\[f=\sum_{1\leq i_{1}<\cdots<i_{r}\leq n}\,(X_{i_{1}}Y_{i_{1}})\,\cdots\,(X_{i_ {r}}Y_{i_{r}})\,\circ f\]
+
+[MISSING_PAGE_EMPTY:13]
+
+and if \(n\) is odd, then we also require: \(f(\{X_{i}\}_{i\in E})=0\) whenever all \(X_{i}\in D\) and \(X_{u_{1}}=X_{v_{1}}\),..., \(X_{u_{n}}=X_{v_{n}}\).
+
+We say that _f has Young alternation from \(V\) to \(U\)_ if \(f\) is alternating from each subset of \(V\) to \(U\).
+
+_Remarks._ These two properties (dual to those of Definition 2.3, in a sense that will be discussed further in Section 6) are clearly independent of the choice of orderings (14) for \(U\) and \(V\); this question does not come up if 2 is not a zero divisor on \(A\), since then (ii) is an immediate consequence of (i). If \(\#U<\#V\) and \(f\) is alternating from \(V\) to \(U\), then \(f\) = 0.
+
+The following four propositions are precise analogs of the preceding ones as are their proofs (except for some easy modifications involving (ii)), which will not be given here. In the first three of these propositions, we assume \(f\) is symmetric in each of two disjoint subsets \(U\) and \(V\) of \(E\).
+
+**Proposition 2.1a**.: _If \(V_{1}\subseteq V\), \(\#V_{1}=r\) and \(f\) _is alternating from \(V_{1}\) to \(U\), then \(f\) is alternating from every _r-element subset of \(V\) to \(U\)_.
+
+**Proposition 2.2a**.: _If \(v\in V\), \(f\) _is alternating from \(V-\{v\}\) to \(U\) and from \(\{v\}\) to \(U\), and \(\#V\) is not a zero divisor on \(A\), then \(f\) _is alternating from \(V\) to \(U\), provided also that_ (ii) _is satisfied when \(\#U=\#V\) is odd._
+
+**Corollary.** _If \(A\) is torsion-free_, and \(f\) _is alternating from \(\{v\}\) to \(U\) for some \(v\in V\), then either \(f=0\), or else_: \(\#U\geq\#V\), and_ (_provided that_ (ii) _is satisfied when \(\#U=\#V\) is odd_)_f_ _has Young alternation from \(V\) to \(U\)._
+
+**Proposition 2.3a**.: _If \(\#U=\#V\) and \(f\) _has Young alternation from \(V\) to \(U\), then \(f\) _has Young alternation from \(U\) to \(V\)._
+
+**Proposition 2.4a**.: _If \(f\) _is symmetric in three disjoint subsets \(U\), \(V\), \(W\) of \(E\), and has Young alternation from \(W\) to \(V\) and from \(V\) to \(U\), then \(f\) _has Young alternation from \(W\) to \(U\)._
+
+**Definition 2.5**.: By a _partitioning_ of \(E\) will be meant a finite set
+
+\[P=\{U_{1}\,....,\,U_{r}\}\]
+
+of disjoint nonempty sets whose union is \(E\). We say _f is symmetric_ (_or alternating_) _in \(P\)_ if it is such in each elemnt \(U_{i}\) of \(P\). We say _f has Young alternation in \(P\)_ if \(f\) is alternating in \(P\), and has Young symmetry from \(U_{i}\) to \(U_{j}\) whenever \(U_{i}\), \(U_{i}\) are distinct elements of \(P\) with \(\#U_{i}\leq\#U_{j}\). Finally, we say _f has Young symmetry in \(P\)_ if \(f\) is symmetric in \(P\), and has Young alternation from \(U_{i}\) to \(U_{j}\) whenever \(U_{i}\), \(U_{j}\) are distinct elements of \(P\) with \(\#U_{i}\leq\#U_{j}\).
+
+RemarksThe requirement \(\#U_{i}\leqslant\#U_{j}\) in this definition is necessary, since otherwise \(f\) would be identically 0. Part of the interest of these symmetry conditions involving \(P\) is that, if \(A\) is torsion-free, they are maximal, i.e., imposing any further symmetry condition which is not a consequence of these forces \(f\) to be 0.
+
+**Example 2.6**.: With notation as in Example 2.2, the function
+
+\[F=\pi(J_{\mathbf{1},\mathbf{1}}\cdots J_{\mathbf{1},\mathbf{a}_{\mathbf{j}}})\, \pi(J_{\mathbf{2},\mathbf{1}}\cdots J_{\mathbf{2},\mathbf{a}_{\mathbf{j}}}) \cdots\,\pi(J_{\mathbf{s},\mathbf{1}}\,,...,J_{\mathbf{s},\mathbf{a}_{\mathbf{j }}})\]
+
+with
+
+\[E=\{J_{\mathbf{1}},...,\,J_{\mathbf{s},\mathbf{a}_{\mathbf{j}}}\},\qquad D=\{1, \text{...},\,n\},\qquad A=R\]
+
+has Young alternation in the partitioning \(P\) of \(E\) into the \(s\) disjoint subsets
+
+\[U_{i}=\{J_{i,\mathbf{1}}\,,...,\,J_{i,\mathbf{a}_{\mathbf{j}}}\}\qquad(1\leqslant i \leqslant s).\]
+
+NoteThis illustrates the connection between Young alternation and the coordinate ring of the flag manifold (which is spanned over \(R\) by expressions of the above type \(F\)).
+
+We conclude this section by describing the ideal in \(Z[S(E)]\) which annihilates functions with Young alternation in \(P\).
+
+**Proposition 2.5**.: _Let \(R\) be a commutative ring with \(1,\)\(I\) a left ideal in \(R[S(E)],\)\(\alpha\in R[S(E)].\)_
+
+_If every \(E\)-indexed function \(f\) with values in an \(R\)-module, such that \(f\) is annihilated by \(I,\) is also annihilated by \(\alpha,\) then \(\alpha\in I.\)_
+
+_Proof_. Apply the hypothesis to the \(E\)-indexed function \(\tilde{J}\) with common domain \(E,\) taking values in \(R[S(E)]/I,\) defined by:
+
+\[\tilde{J}(\alpha\colon E\to E) = 0\qquad\qquad\text{if $\sigma$ is not a bijection,}\] \[= \sigma+I\qquad\text{if $\sigma\in S(E).$}\]
+
+Note that, for \(\alpha\in R[S(E)],\)
+
+\[(\alpha\circ\tilde{J})(1_{E})=\alpha+I.\]
+
+**Definition 2.6**.: Let
+
+\[P=\{U_{1}\,,...,\,U_{s}\}\]
+
+be a partitionong of the finite set \(E\) into \(s\) disjoint nonempty subsets, and suppose that (for \(1\leqslant j\leqslant s\))
+
+\[U_{j}=\{u_{j,\mathbf{1}}\,,...,\,u_{j,\mathbf{a}_{\mathbf{j}}}\},\qquad a_{j }=\#U_{j}\,, \tag{15}\]
+
+[MISSING_PAGE_EMPTY:16]
+
+## 3. Equations of the Flag Manifold
+
+Let \(V\) be a finite-dimensional vector space over a field \(K\), with basis \(B=\{e_{1},...,e_{n}\}\). We denote by \(PV\) the associated projective space, by \([x]\) the image in \(PV\) of a nonzero element \(x\) of \(V\), and by \(mV\) the direct sum of \(m\) copies of \(V\).
+
+If \(\omega\in\varLambda^{p}V\), the coordinates \(\varPi(j_{1},...,j_{p})=\varPi(j_{1},...,j_{p})(\omega)\) of \(\omega\) with respect to \(B\) are defined by
+
+\[\omega=\sum_{1\leqslant j_{1}<\cdots<j_{p}<n}\varPi(j_{1},...,j_{p})\,e_{j_{ 1}}\wedge\,\cdots\wedge e_{j_{p}}\]
+
+when \(j_{1}<\cdots<j_{p}\), and are then specified uniquely for arbitrary \(j_{1},...,j_{p}\) between \(1\) and \(n\) by the requirement that \(\varPi(j_{1},...,j_{p})\) be alternating in \(j_{1},...,j_{p}\).
+
+An element \(\omega\in\varLambda^{p}V\) is called _pure_, or _completely reducible_, if there exist \(v_{i}\) in \(V\) such that
+
+\[\omega=v_{1}\wedge\,\cdots\wedge v_{p}\,. \tag{17}\]
+
+In terms of the \(B\)-coordinates for \(\omega\), necessary and sufficient conditions for the complete reducibility of \(\omega\) are given by the Eqs. (1) in the Introduction. If \(\omega\) is nonzero and completely reducible, it may be associated with the \(p\)-dimensional subspace
+
+\[\omega^{\perp}=\{v\in V;v\wedge\omega=0\}\]
+
+of \(V\), which has \(\{v_{1},...,v_{p}\}\) for \(K\)-basis if (17) holds. (For a proof of these assertions, cf. [14].)
+
+The completely reducible \(\omega\) in \(\varLambda^{p}V\) form the \(K\)-rational points of the _affine Grassman variety_\(G_{p}(V)\), which may be defined as the image of the morphism
+
+\[PV\rightarrow\varLambda^{p}V,(v_{1},...,v_{p})\mapsto v_{1}\wedge\,\cdots \wedge v_{p}\,.\]
+
+This forms a cone over the _projective Grassmann manifold_\(G_{p-1}(PV)\) whose \(K\)-rational points parametrize the \((p-1)\)-dimensional linear subspaces of \(PV\).
+
+Similarly, we define the _affine flag variety_\(\operatorname{Flag}(V)\) to be the image of the morphism
+
+\[\Phi_{\nu}\colon nV\to V,(v_{1},...,v_{n})\mapsto v_{1}+v_{1}\wedge v_{2}+ \cdots+v_{1}\wedge v_{2}\wedge\,\cdots\wedge v_{n};\]
+
+this is a multicone over the _projective flag manifold_
+
+\[\operatorname{Flag}(PV)\subseteq PV\,\times\,P\varLambda^{2}V\,\times\, \cdots\,\times\,P\varLambda^{n-1}V.\]
+
+The latter has for generic point
+
+\[([v_{1}],[v_{1}\wedge v_{2}],...,\,[v_{1}\wedge\,\cdots\wedge v_{n-1}])\]
+
+[MISSING_PAGE_FAIL:18]
+
+with the meaning of \(\Pi(j_{1}\,,...,j_{p})\) extended to all sequences \(j_{1}\,,...,j_{p}\) of integers between \(1\) and \(n\) by requiring that it be alternating in the \(j\)'s. Finally, let_
+
+\[\phi^{*}\colon R[\Pi]\to R[X]\]
+
+_be the \(R\)-algebra homomorphism which maps each \(\Pi(j_{1}\,,...,j_{p})\) into_
+
+\[\pi(j_{1}\,,...,j_{p})=\left|\begin{array}{c}X_{1,j_{1}}\cdots X_{1,j_{p}}\\ \vdots\\ X_{p,j_{1}}\cdots X_{p,j_{p}}\end{array}\right|\,. \tag{18}\]
+
+_Then the ideal \(\operatorname{Ker}\phi^{*}\) in \(R[\Pi]\) is generated by the union of the images of the following functions_:
+
+\[g_{p,q,r}=\left[I-\sum_{1\leqslant q_{1}<\cdots<q_{p}\leqslant p}\left(J_{q_ {1}}K_{1}\right)\,\cdots\,\left(J_{q_{r}}K_{r}\right)\right]\circ\Pi(J_{1} \cdots\,J_{p})\,\Pi(K_{1}\,,...,\,K_{q}) \tag{19}\]
+
+(\(n\geqslant p\geqslant q\geqslant r\geqslant 1\), all \(J\)'s and \(K\)'s having common domain \(\{1,...,\,n\}\)).
+
+_Remark_. In other words, \(\operatorname{Ker}\phi^{*}\) is generated as an ideal by the set of elements in \(R[\Pi]\) which (employing the abuse of notation described in Example 2.2) may be written
+
+\[\left[I-\sum_{1\leqslant q_{1}<\cdots<q_{r}\leqslant p}\left(j_{q_{1}}k_{1} \right)\,\cdots\,\left(j_{q_{r}}k_{r}\right)\right]\circ\Pi(j_{1}\,,...,j_{p} )\,\Pi(k_{1}\,,...,\,k_{q}) \tag{20}\]
+
+(\(n\geqslant p\geqslant q\geqslant r\geqslant 1\), all \(j\)'s and \(k\)'s integers between \(1\) and \(n\)).
+
+_Proof of Theorem 3.1_. Denote by \(L\) the ideal in \(R[\Pi]\) generated by the union of the images of the functions (19). The fact
+
+\[L\subseteq\operatorname{Ker}\phi^{*}\]
+
+follows immediately from Example 2.2 in Section 2. Thus, to complete the proof of the theorem, it suffices to exhibit a subset \(H\) of \(R[\Pi]\) with the two following properties:
+
+* The image of \(H\) generates \(R[\Pi]/L\) as an \(R\)-module
+* The images under \(\phi^{*}\) of the elements of \(H\) are linearly independent over \(R\).
+
+(Indeed, given (A), both maps in
+
+\[RH\to R[\Pi]/L\to R[\Pi]/\operatorname{Ker}\phi^{*}\]
+
+are epimorphisms of \(R\)-modules, while (B) implies the composite map is monic, whence the second map is an isomorphism and \(L\,=\,\operatorname{Ker}\phi^{*}\).)We define \(H\) to consist of \(1\) together with all monomials
+
+\[\omega\,=\,\Pi(j_{1,1}\,,...,j_{1,a_{1}})\,\Pi(j_{2,1}\,,...,j_{2}\,{}_{a_{2}})\, \cdots\,\Pi(j_{s,1}\,,...,j_{s,a_{s}}), \tag{21}\]
+
+all \(j\)'s integers between \(1\) and \(n\), with
+
+1. \(a_{1}\geq a_{2}\geq\,\cdots\,\geq a_{s}\geq 1\),
+2. \(j_{r,1}<j_{r,2}<\,\cdots\,<j_{r,a_{r}}\) (\(1\leq r\leq s\)),
+3. \(j_{1,r}\leq j_{2,r}\leq\,\cdots\) (\(1\leq r\leq a_{2}\)).
+
+These are the "standard power products" of Young [23], used by Hodge to study the Grassmann and flag manifolds in [7, p. 24]; in Section 5 of the same paper, Hodge proves that \(H\) has property (3). (Although dealing only with fields of characteristic \(0\), his proof is in fact valid for any commutative ring \(R\).)
+
+It remains to be proved that \(H\) has property (A). Thus, given any monomial \(\omega\) of the form (21) (but not necessarily satisfying conditions (i), (ii), and (iii)), we must show \(\omega\) differs from an \(R\)-linear combination of elements of \(H\) by an element in \(L\). Unless two \(j\)'s occurring in the same factor of \(\omega\) are equal (in which case \(\omega=0\)) we may assume (possibly replacing \(\omega\) by \(-\omega\)) that \(\omega\) satisfies conditions (i) and (ii); let \(\Lambda(a_{1}\,,...,a_{s})\) denote the set of all expressions (21) satisfying (i) and (ii) for given \(a_{1}\,,...,\,a_{s}\).
+
+If \(\omega\) already has property (iii) we are done; if not, we have \(j_{u,r}>j_{v,r}\) for some \(u\), \(v\), \(r\) satisfying \(1\leq u\leq v\leq s\), \(1\leq r\leq a_{v}\); then \(\omega\) differs by one of the given generators of \(L\) from the sum which we write (by an abuse of notation)
+
+\[\sum_{1<a_{1}<\cdots<a_{r}<p}\,(j_{u,s_{2}}j_{v,1})\,\cdots\,(j_{u,s_{r}}j_{v,r})\,\circ\,\omega.\]
+
+This sum (dropping terms which are \(0\)) may be written in the form
+
+\[\pm\omega_{1}\pm\cdots\pm\omega_{N}\]
+
+with each \(\omega_{i}\) in \(\Lambda(a_{1}\,,...,\,a_{s})\); moreover, each \(\omega_{i}\) occurs later than \(\omega\) in the linear ordering on the finite set \(\Lambda(a_{1}\,,...,\,a_{s})\) obtained by lexicographically ordering the sequences
+
+\[j_{s,a_{s}}\,,...,j_{1,2}\,,j_{1,1}\]
+
+(associated with the elements (21) by reading their indices from right to left). Hence, a finite number of iterations of this process yields the desired representation of \(\omega\), which complete the proof of the theorem.
+
+_Remarks._ The preceding proof that \(H\) has property (A) is a bit sketchy; the reader may find the details supplied in [18, Proposition 2.1]. This part of the proof is also essentially due to Hodge [6, Sect. 3], with some modifications needed because Hodge used a generating set slightly different from the one used here (cf. Corollary 3 to Theorem 5.3 in Section 5).
+
+[MISSING_PAGE_FAIL:21]
+
+the hypothesis of Corollary 2) that every \(\sigma\in S(E)\) differs from a \(Z\)-linear combination of standard \(t\in H^{\prime}\) by an element in the left ideal in \(\mathbb{Z}[S(E)]\) generated by the elements
+
+\[G_{p,\sigma,r} = I-\sum_{1\leq q_{1}<\cdots<s_{r}\leq q_{p}}(u_{p,s_{1}}u_{q,1}) \cdots(u_{p,s_{r}}u_{p,r}) \tag{22a}\] \[(1\ \leq p\ \leq s,\ 1\ \leq q\ \leq s,\ p\ \neq q,\ a_{p}\ \geq a_{q}\ \geq r\ \geq 1)\]
+
+together with the elements
+
+\[I+(u_{j,p}u_{j,a})\qquad(1\ \leq j\ \leq s,\ 1\ \leq p\ <\ q\ \leq a_{j}) \tag{22b}\]
+
+(for we may use these generators to reduce \(\sigma\) to a linear combination of standard permutations, as the relations (20) were used in the proof of Theorem 3.1.). But the left ideal generated by (22a), (22b) is \(\mathcal{OG}(P)\), which shows:
+
+(1) the image of \(H^{\prime}\) spans \(\mathbb{Z}[S(E)]\mathcal{OG}(P)\) over \(\mathbb{Z}\).
+
+For the remainder of the proof we shall assume (as we may without loss of generality in Corollary 2) that \(E=\{1,\)..., \(n\}\), that the partitionings in Corollaries 2 and 3 coincide, and that the ordering (22) is the usual one on \(\{1,\)..., \(n\}\), which means
+
+\[u_{j,1}=a_{1}+\cdots+a_{j-1}+1,u_{j,2}=a_{1}+\cdots+a_{j-1}+2,...,u_{j,a_{j}}= a_{1}+\cdots+a_{j}\,.\]
+
+For \(\sigma\in S_{n}\), we have
+
+\[\sigma\circ\omega\,=\pi(\sigma 1,...,\,\sigma a_{1})\,\pi(\sigma(a_{1}+1),..., \,\sigma(a_{1}+a_{2}))\,\cdots.\]
+
+Now observe the two following facts:
+
+(2) \(\omega\) _is annihilated by \(R\cdot\mathcal{OG}(P)\)_ (this follows from Theorem 3.1, and indeed from Sylvester's theorem).
+
+(3) \(\sigma\mapsto\sigma\circ\omega\) _maps \(H^{\prime}\) injectively into the set \(H\) of Theorem 3.1, which was proved linearly independent over \(R\)._
+
+Corollaries 2 and 3 are both immediate consequences of (1), (2), and (3) (with \(R=\mathbb{Z}\) for Corollary 2).
+
+Corollary 4: _Let \(F\) denote the function in Example 2.6; then the annihilator of \(F\) in \(R[S(E)]\) is \(R\cdot\mathcal{OG}(P)\)._
+
+_Proof._ With notation as in Example 2.6, let \(\lambda\) denote the map \(D\to E\) which sends
+
+\[J_{1,1}\,...,\ J_{1,a_{1}}\,\ J_{2,1}\,...,\ J_{2,a_{2}}\,...,\ J_{s,a_{s}}\]
+
+(in that order) into \(1,\)..., \(n\).
+
+It suffices to show the annihilator of \(F\) is contained in \(R\cdot\mathcal{G}\mathcal{U}(P)\); this follows, using the notation and result of the preceding Corollary 3, from
+
+\[\alpha\in R[S(E)]\quad\text{and}\quad\alpha\cdot F=0\Rightarrow 0\,=(\alpha \cdot F)(\lambda)\,=\,\alpha\cdot\omega\Rightarrow\alpha\in R\cdot\mathcal{G} \mathcal{U}(P).\]
+
+The final result we shall prove in this section, is that the first corollary to Theorem 3.1 does not hold without the hypothesis char \(K=0\):
+
+**Proposition 3.2**: _If \(V\) is a 5-dimensional vector space over a field of characteristic 2, the left sides of the equations (1), (2) in the Introduction do not generate the prime ideal of \(\operatorname{Flag}(V)\)._
+
+_Proof_. In the present notation, the assertion to be proved is, that \(\operatorname{Ker}\,\mathcal{G}_{\mathcal{P}}^{\pm}\) properly contains the ideal in \(K[\Lambda V]\) generated by \(\Pi(\,)\) together with the elements
+
+\[\Pi(i_{1}\,,...,i_{p})\,\Pi(j_{1}\,,...,j_{d})\,-\sum_{s=1}^{p}\Pi(i_{1}\, \cdots\,i_{s-1}j_{1}i_{s+1}\,\cdots\,i_{p})\,\Pi(i_{s}j_{2}\,\cdots\,j_{p}) \tag{23}\]
+
+(\(5\,\geqslant\,p\,\geqslant\,q\,\geqslant\,1\), all \(i\)'s and \(j\)'s between 1 and 5). It suffices to show the element
+
+\[G = \Pi(3,\,4,\,5)\,\Pi(1,2)\] \[-\,\Pi(1,\,2,\,5)\,\Pi(3,\,4)\,-\,\Pi(1,\,4,\,2)\,\Pi(3,\,5)\, -\,\Pi(3,\,1,\,2)\,\Pi(4,\,5)\]
+
+in \(\operatorname{Ker}\,\mathcal{G}_{\mathcal{P}}^{\pm}\) (which lies in the range of the function \(g_{3,2,2}\); cf. (19)) is not a \(K[\Lambda V]\)-linear combination of \(\Pi(\,)\) and the elements (23). By simple degree considerations, it suffices to show \(G\) is not a \(F_{\mathbb{z}}\)-linear combination of the following special elements in (23):
+
+\[\Pi(i_{1}\,,\,i_{2}\,,\,i_{3})\,\Pi(j_{1}\,,j_{3}) - \Pi(j_{1}\,,\,i_{2}\,,\,i_{3})\,\Pi(i_{1}\,,\,j_{3})\,-\,\Pi(i_{1 }\,,\,j_{1}\,,\,i_{3})\,\Pi(i_{2}\,,\,j_{3}) \tag{24}\] \[- \Pi(i_{1}\,,\,i_{2}\,,\,j_{1})\,\Pi(i_{3}\,,\,j_{2})\] \[(\text{all $i$'s and $j$'s between 1 and 5}).\]
+
+Let \(W\) denote the 100-dimensional subspace of \(F_{\mathbb{z}}[\Lambda V]\) generated over \(F_{\mathbb{z}}\) by all \(\Pi(i_{1}i_{2}i_{3})\,\Pi(j_{1}j_{3})\) (\(i\)'s and \(j\)'s between 1 and 5); then \(W\) contains \(G\) and the elements (24), and it suffices to define a linear functional \(\Psi\) on \(W\) which is 0 for the elements (24) and takes on the value 1 for \(G\). Such a linear functional is supplied by the function \(g\) of Example 2.5 in Section 2; we define
+
+\[\Psi;\,W\!\to\!F_{\mathbb{z}}\,,\,\Pi(i_{1}\,,\,i_{2}\,,\,i_{3})\,\Pi(j_{1}\,, j_{2})\!\to\!g(j_{1}\,,\,j_{1}\,,\,i_{1}\,,\,i_{2}\,,\,i_{3}),\]
+
+\(\Psi\) vanishes on the elements (_Note._ By similar reasoning, the (still open) question of whether, for \(V\) an \(n\)-dimensional vector space over a field \(k\), the prime ideal of the Grassmann variety \(G_{n}(V)\) is generated by Eqs. (1) in the Introduction, may be seen to be equivalent to the following purely combinatorial question (involving the given field \(k\) and integer \(n\)).
+
+Problem. _Let \(f(X_{1}\),..., \(X_{n}\), \(Y_{1}\),..., \(Y_{n})\) be a function of \(\{X_{1}\),..., \(Y_{n}\}\)-indexed variables, with common domain \(D\), taking values in a vector-space over \(k\), and alternating in \(U=\{X_{1}\),..., \(X_{n}\}\) and \(V=\{Y_{1}\),..., \(Y_{n}\}\). If \(f\) is symmetric from \(U\) to \(V\) and from \(\{X_{1}\}\) to \(V\), must \(f\) have Young symmetry from \(U\) to \(V\)?_
+
+The answer is in the affirmative if char \(k=0\). It is conceivable the answer is in the affirmative even if \(f\) is allowed to take values in an arbitrary Abelian group. There is no loss of generality involved in assuming \(D=\{1,...,\,2n\}\). It is easy to see that if \(f\) has symmetry from one (hence every, by Proposition 2.1) \(i\)-element subset of \(U\) to \(V\), then \(f\) has symmetry from \((n\to i)\)-element subsets of \(U\) to \(V\); hence the answer is in the affirmative if \(n\leq 3\). The first nontrivial case is thus \(n=4\), char \(k=2\); some work involving the use of a computer (in which Kenneth Baclawski was kind enough to aid the author) seems to prove the answer is affirmative in this particular case also.1
+
+Footnote 1: E. Procesi and C. de Concini, after examining a preprint of the present paper, have notified the author that the case \(n=5\), char \(=2\) gives a counterexample.
+
+## 4. The Relation between the Young Alternater and the Young Alternation Ideal
+
+Throughout this section, we shall maintain the following assumptions of Section 2:
+
+\(f\in A^{(D^{E})}\), \((A,\,+)\) is an Abelian group, \(E\) is a finite set, \(D\) is any set. Also, we shall adopt, for the remainder of this paper, the usual convention whereby \(U\) being any subset of \(E\), we identify \(S(U)\) in \(S(E)\), \(\mathbb{Z}[S(U)]\) in \(\mathbb{Z}[S(E)]\), via the injection \(i\): \(S(U)\to S(E)\) defined by
+
+\[i(\pi)e = \pi e\qquad\text{if}\quad e\in U\qquad(\pi\in S(U),\,e\in E),\] \[= e\qquad\text{if}\quad e\notin U.\]
+
+Definition 4.1. : If \(U\subseteq E\), we define
+
+\[\text{Sym}(U) = \sum_{\sigma\in S(U)}\sigma\in\mathbb{Z}[S(E)],\] \[\text{Alt}(U) = \sum_{\sigma\in S(U)}(\text{sgn }\sigma)\sigma\in\mathbb{Z}[S(E)].\]If \(P\) is a partitioning of \(E\) (cf. Definition 2.5) we define:
+
+\[\operatorname{Sym}(P)=\prod_{U\in P}\operatorname{Sym}(U),\qquad \operatorname{Alt}(P)=\prod_{U\in P}\operatorname{Alt}(U),\] \[S(P)=\{\sigma\text{ in }S(E)\text{: }x\in U\in P\Rightarrow \sigma\in U\}=S(U_{1})\cdots S(U_{s}).\]
+
+_Remarks_. If \(U\), \(U^{\prime}\) are disjoint subsets of \(E\), \(S(U)\) and \(S(U^{\prime})\) commute elementwise (with the above identifications); it follows that each of \(\operatorname{Sym}(U)\), \(\operatorname{Alt}(U)\) commutes with each of \(\operatorname{Sym}(U^{\prime})\), \(\operatorname{Alt}(U^{\prime})\), whence the above products make sense. Note that \(\operatorname{Sym}(U)\circ f\), \(\operatorname{Sym}(P)\circ f\) are symmetric in \(U\) and in \(P\), respectively; similarly, \(\operatorname{Alt}(U)\circ f\) and \(\operatorname{Alt}(P)\circ f\) are alternating in \(U\) and in \(P\), respectively.
+
+While Young alternation, and the Young alternation ideal, are defined with respect to a partitioning \(P=\{U_{1}\),..., \(U_{s}\}\) of \(E\) into disjoint sets, _the definition of the Young alternater requires in addition the assignment of a linear ordering to each of these sets_, as we shall now see. This discrepancy deserves further discussion, and we shall return to it.
+
+**Definition 4.2**.: Let \(P_{<}=\{(U_{1}\), \(<_{1}),..., \(U_{s}\), \(<_{s})\}\) be a set of linearly ordered disjoint nonempty sets whose union is \(E\); for \(1\leq j\leq s\), let the elements of \(U_{j}\) in the ordering \(<_{j}\) be \(u_{j,1}\),..., \(u_{j,a_{j}}\) (so \(a_{j}=\#U_{j}\))..
+
+We define the _jth row of \(P_{<}\)_ to be \(U_{j}\,(1\leq j\leq s)\) and let \(P\) denote the partitioning \((U_{1}\),..., \(U_{s})\) of \(E\).
+
+We define the _kth column of \(P_{<}\)_ to be the (unordered) set \(V_{k}\) consisting of all \(U_{jk}\) in \(E\) with second index \(k\) (for \(1\leq k\leq\max a_{j}\)), and we let \(P_{<}^{\pm}\) denote the partitioning \(\{V_{1}\), \(V_{2}\),...} of \(E\).
+
+Finally, we define the _Young alternater for \(P_{<}\)_ to be the element
+
+\[YA(P_{<})=\operatorname{Alt}(P)\operatorname{Sym}(P_{<}^{\ast})\]
+
+in \(\mathbb{Z}[S(E)]\), and define the _Young symmetrizer for \(P_{<}\)_ to be
+
+\[YS(P_{<})=\operatorname{Sym}(P)\operatorname{Alt}(P_{<}^{\ast}).\]
+
+_Remark_. Note that this definition does not depend on a choice of ordering in \(P\), i.e., between the \(s\) elements \(U_{1}\),..., \(U_{s}\) of \(P\), as in the usual formulation via tableaux.
+
+**Theorem 4.1**.: If \(R\) is a commutative ring with \(1\), \(E\), and \(P_{<}\) as in Definition 4.2, _then the left annihilator of \(YA(P_{<})\) in \(R[S(E)]\) is \(R\cdot\mathscr{OV}(P)\)._
+
+_Proof_. We assume, as we may without loss of generality, that (using the notation of Definition 4.2):
+
+\[a_{1}\geq\cdots\geq a_{s}>0,\qquad E=\{1,...,\,n\},\] \[U_{1}=\{1,...,\,a_{3}\},\qquad U_{2}=\{a_{1}+1,...,\,a_{1}+a_{2}\},\text{ etc.},\]the ordering \(<_{i}\) in
+
+\[U_{j}=\{a_{1}+\cdots+a_{j-1}+1,...,a_{1}+\cdots+a_{j}\}\]
+
+being the usual one.
+
+To prove the theorem, it suffices to construct an element \(\omega\) in some left \(R[S_{n}]\)-module with the two following properties:
+
+1. The annihilator of \(\omega\) in \(R[S_{n}]\) is \(R\cdot\mathscr{G}\mathscr{U}(P)\).
+2. If \(\alpha\in R[S(E)]\), then \(\alpha\circ\omega=0\Leftrightarrow\alpha YA(P_{<})=0\).
+
+For this purpose, we use the element
+
+\[\omega=\pi(1,...,\,a_{1})\pi(a_{1}+1,...,\,a_{1}+a_{2})\,\cdots\,\pi(a_{1}+ \cdots+a_{s-1}+1,...,\,n)\in\Pi[X]\]
+
+(using the notation of Theorem 3.1), the left action of \(R[S_{n}]\) on \(\Pi[X]\) being the "column action" defined by
+
+\[\sigma\circ f(X_{1.1},...,\,X_{i,j},...)=f(X_{1,\sigma 1},...,\,X_{i,\sigma j},...)\qquad( \sigma\in S_{n}) \tag{25}\]
+
+We know that (1) holds by Corollary 3 to Theorem 3.1, and must next verify (2).
+
+We begin by noting that
+
+\[\omega=\left|\begin{array}{c}X_{1,1}\cdots X_{1,a_{1}}\\ \vdots\\ X_{a_{1},1}\cdots X_{a_{1},a_{1}}\end{array}\right|\cdot\left|\begin{array}{ c}X_{1,a_{1}+1}\cdots X_{1\,a_{1}+a_{2}}\\ \vdots\\ X_{a_{2},a_{1}+1}\cdots X_{a_{2},a_{1}+a_{2}}\end{array}\right|_{.}\] \[\left.\begin{array}{c}X_{1,a_{1}+\cdots+a_{s-1}+1},...,X_{1,n}\\ \vdots\\ X_{a_{s},a_{1}+\cdots+a_{s-1}+1},...,X_{a_{s},n}\end{array}\right|\]
+
+may be rewritten as
+
+\[\sum_{\sigma_{1}\in S(U_{1})}\cdots\sum_{\sigma_{k}\in S(U_{j})} \left(\prod_{i=1}^{s}\left(\mbox{sgn }\sigma_{i}\right)\sigma_{i}\right)\circ X_{1.1}X_{2,2}\cdots X_{a_{1},a_{2}}X _{1.\sigma_{1}+1}\cdots X_{a_{2},a_{1}+a_{2}}\cdots X_{a_{s},n}\] \[=\mbox{Alt}(P)\circ\prod_{j}\prod_{k\in V_{j}}X_{j,k}\,,\]
+
+where the action of \(R[S_{n}]\) is that given by (25) and the \(V\)'s are the columns of \(P_{<}\) as given by Definition 4.2; if the reader wishes, these \(V\)'s may be thought of as the columns of the Young's tableau
+
+\[\begin{array}{c}1,\ldots\ldots\ldots\ldots\ldots\ldots,a_{1}\\ a_{1}+1,\ldots\ldots\ldots\ldots,a_{1}+a_{2}\\ \vdots\\ a_{1}+\cdots+a_{s-1}+1,...,n\end{array}\]Thus we have
+
+\[\omega=\operatorname{Alt}(P)\circ\theta,\ \ \ \ \ \ \theta=\prod_{j}\prod_{k\in P_{j}}X_{j,k} \in\Pi[X]. \tag{26}\]
+
+We next observe that if \(\sigma\in S_{n}\),
+
+\[\sigma\circ\theta=\theta\Leftrightarrow\theta\in S(V_{\lambda})\ S(V_{\lambda}) \cdots=S(P_{<}^{*})\]
+
+whence (the \(r_{\sigma}\) denoting elements of \(R\))
+
+\[\left(\sum_{\sigma\in S_{n}}r_{\sigma}\sigma\right)\circ\theta=0\Leftrightarrow \sum_{\tau_{\sigma}\in S(P_{<}^{*})}r_{\tau\tau_{\sigma}}=0\ \ \ \text{for all}\ \tau\in S_{n} \Leftrightarrow\left(\sum_{\sigma\in S_{n}}r_{\sigma}\sigma\right) \operatorname{Sym}(P_{<}^{*})=0.\]
+
+Hence, if \(\sigma\in R[S_{n}]\), then
+
+\[0=\alpha\circ\omega=[\alpha\operatorname{Alt}(P_{<})]\circ\theta\Leftrightarrow 0 =\alpha\operatorname{Alt}(P_{<})\operatorname{Sym}(P_{<}^{*})=\alpha YA(P_{<}),\]
+
+as was to be proved.
+
+_Remarks_. The special case of this theorem when \(R=\theta\) was essentially known to Young [24, Sect. 12]. Let us consider one consequence of the theorem just proved, in this special case that \(R\) is a field of characteristic \(0\). In this case one knows that \(R[S(E)]\) is semisimple, and that the right ideal generated by \(YA(P_{<})\) in \(R[S(E)]\) is minimal; recall also that \(YA(P_{<})\) is a quasi-idempotent:
+
+\[[YA(P_{<})]^{\natural}=\gammaYA(P_{<}), \tag{27}\]
+
+where \(\gamma\) is a positive integer (cf. [2] or [15]). Let \(A\) be an \(R\)-module, \(D\) any set; it then follows from Theorem 4.1 that \(\mathcal{Y}\mathcal{U}(P)\) is a maximal left ideal, and that \(YA(P_{<})\circ\) projects \(A^{(D^{E})}\) onto the sub-\(R\)-module of functions which have Young alternation in \(P\); thus, this class of functions may be characterized as
+
+\[YA(P_{<})\circ A^{(D^{E})}=\Big{\{}f\in A^{(D^{E})}\colon\frac{1}{\gamma}\ YA(P_{<})\circ f=f\Big{\}}.\]
+
+There is, it seems to the author, one disadvantage possessed by this latter characterization (which is related to Weyl's definition of "quantics") as opposed to that by \(\mathcal{Y}\mathcal{U}\) (which is related to the extension of Weyl's construction by Carter and Lusztig), namely, that the class of functions in question depends only on the partitioning \(P\), not on the extra structure required in the definition of \(P_{<}\) (i.e., the assignment of an ordering to each set in \(P\)). The topics we are now studying stand in the closest connection with the representation theory of the symmetric group; for this reason one must be more careful than usual about making nonnatural identifications between a set \(U_{4}\) of cardinality \(a_{i}\) and the set \(\{1,\)..., \(a_{i}\}\).
+
+[MISSING_PAGE_FAIL:28]
+
+_Remarks._ These modified symmetrizers and alternators differ (when they are defined) from the more usual ones only by a numerical factor: we have \(\operatorname{Sym}(V)\circ f=C\cdot\operatorname{Sym}(V\mid P)f\) if \(f\) is symmetric in \(P\), \(\operatorname{Alt}(V)\circ f=C\cdot\operatorname{Alt}(V\mid P)f\) if \(f\) is alternating in \(P\), with
+
+\[C=\prod_{i=1}^{s}\,(\#[U_{i}\cap V])!\,=\,\#[S(V)\cap S(P)]. \tag{28}\]
+
+The point is this: If \(f\) is symmetric in \(P\), then each term in \(\operatorname{Sym}(V)\circ f=\sum_{\sigma\circ\sigma(V)}\sigma\circ f\) is repeated \(C\) times, since \(\sigma\circ f=\sigma_{1}\circ f\) if \(\sigma_{1}^{-1}\sigma\in S(P)\); by extending the sum only over \(L\), we select one out of each set of \(C\) equal terms.
+
+Note that Theorem 5.3 below and its corollaries all become false if this modified alternation is replaced by the usual kind.
+
+\(\operatorname{Sym}(V\mid P)f\) is only defined if \(f\) in symmetric in \(P\), and is then symmetric in \(V\) (but not, in general, symmetric in \(P\)). Similarly, if \(f\) is alternating in \(P\), then \(\operatorname{Alt}(V\mid P)f\) is alternating in \(V\).
+
+\(\operatorname{Sym}(V\mid P)\) and \(\operatorname{Alt}(V\mid P)\) are easily seen to be independent of the particular choice \(L\) of left coset representatives. If we assume a particular total ordering
+
+\[e_{1}\,<\,e_{2}\,<\,\cdots\,<\,e_{n}\]
+
+for \(E\), we may then choose \(L\) to be the set
+
+\[L_{<}=L_{<}(P,\,V)=\{\sigma\in S(E)\text{: for }1\,\leq i\,\leq s,\,\sigma\mid(U _{i}\cap V)\text{ is monotonic increasing}\}. \tag{29}\]
+
+The earliest reference the author has for the operation \(\operatorname{Alt}(V\mid P)\) on \(P\)-alternating functions is Turnbull [20, p. 27, 43], where this modified alternation is indicated by placing dots over the variables to be alternated.
+
+**Example 5.1**.: With \(E=\{1,\,2,\,3\}\), \(U_{1}=\{1,\,2\}\), \(U_{2}=\{3\}\), we have
+
+\[\operatorname{Sym}(E\mid U_{1}\;,\,U_{2})\,x_{1}x_{2}^{2}x_{3}=\sum\,^{\prime }x_{1}x_{2}^{2}x_{3}\;.\]
+
+If \(<\) is the usual ordering on \(E,\,L_{<}\) here consists of those \(\sigma\) in \(S_{3}\) for which \(\sigma 1<\sigma 2\), i.e., of \((\frac{1}{1}\;\frac{2}{2}\;\frac{3}{2})\), \((\frac{1}{1}\;\frac{2}{2}\;\frac{3}{2}\;\frac{1}{2})\).
+
+**Proposition 5.1**.: _Let \(R\) be a commutative ring, and let \(f\) denote the function \(f(\{C_{i,j}\}_{(i,j)\in E})=[C_{1,1}\,\cdots\,C_{1,n}][C_{2,1}\,\cdots\,C_{2,n}] \,\cdots\,[C_{m,1}\,\cdots\,C_{m,n}]\) of variables indexed by_
+
+\[E=\{(i,j)\colon 1\,\leq i\,\leq\,m,\,1\,\leq j\,\leq n\}\]
+
+_with common domain \(R^{n}\), and taking values in \(R\)_(_where \([C_{1}\;,...,\,C_{n}]\) denotes, as in Section \(1\)_, the \(n\,\times\,n\) determinant whose \(i\)th column is \(C_{i}\in R^{n}\)).__Let \(P_{0}=\{U_{1},...,\,U_{m}\}\) denote the partitioning of \(E\) into the \(m\) disjoint subsets_
+
+\[U_{i}=\{(i,j)\colon 1\,\leq j\leq n\}\qquad(1\,\leq i\,\leq m).\]
+
+_If \(V\) is any subset of \(E\) of cardinality \(>n\), then \(\operatorname{Alt}(V\,|\,P_{0})f=0\)_(_a fortiori_, \(\operatorname{Alt}(V)\,\circ f=0\)_)._
+
+_Proof_. Note first that \(f\) alternates in \(P\), so \(\operatorname{Alt}(V\,|\,P_{0})f\) makes sense. The proof is now the same as that of (4) (which this generalizes):
+
+Any \(R\)-multilinear function of variables with common domain \(R^{n}\), which alternates in \(n+1\) of the variables must be \(0\), and \(\operatorname{Alt}(V\,|\,P_{0})f\) has these properties.
+
+_Note_. This result was proved (using a rather complicated argument which proves a bit more) by Turnbull [20, p. 45, 48].
+
+_For the remainder of this section, we resume the assumptions of Section 2_:
+
+\(f\in A^{(D^{E})}\), \((A,\,+)\) is an Abelian group, \(E\) is a finite set, \(D\) is any set.
+
+**Theorem 5.2**.: _Let \(f\) have Young alternation in a partitioning \(P=\{U_{1},...,\,U_{s}\}\) of \(E\). If \(V\) is a subset of \(E\), of cardinality greater than that of any \(U_{i}\) it meets, then_
+
+\[\operatorname{Alt}(V\,|\,P)f=0\]
+
+_(a fortiori, \(\operatorname{Alt}(V)\,\circ f=0\))._
+
+_Proof_. Let \(L\) be a complete set of left coset representatives for \(S(P)\cap S(V)\) in \(S(V)\), and set
+
+\[\alpha=\sum_{\lambda\in L}\,(\operatorname{sgn}\,\lambda)\lambda\in\mathbb{Z} [S(E)];\]
+
+by definition,
+
+\[\operatorname{Alt}(V\,|\,P)f=\alpha\,\circ f,\]
+
+and it suffices to prove \(\alpha\in\mathcal{OV}(P)\).
+
+We may assume without loss of generality that \(V\) meets every \(U_{i}\), since neither \(\alpha\) nor the truth of the assertion to be proved are affected if we subtract from \(E\) and from \(P\) those \(U_{i}\) disjont from \(V\). We may also assume that \(E=\{1,...,\,n\}\), and that
+
+\[U_{i}=\{j\colon a_{1}\,+\,\cdots\,+\,a_{i-1}<j\leq a_{1}\,+\,\cdots\,+\,a_{i}\},\,a_{1}\geq\cdots\geq a_{s}>0,\quad\sum_{i=1}^{s}\,a_{i}=n.\]
+
+We now invoke the element \(\omega\) of Corollary 3 to Theorem 3.1 (with \(R=\mathbb{Z}\)) whose left annihilator in \(\mathbb{Z}[S_{n}]\) is \(\mathcal{OV}(P)\); thus, it suffices to prove that the following expression (using the notation of the corollary just cited) equals \(0\):
+
+\[\alpha\,\circ\,\omega=\sum_{\lambda\in L}\,(\operatorname{sgn}\,\lambda)\,\pi (\lambda 1,...,\,\lambda a_{1})\,\pi(\lambda(a_{1}\,+\,1),...,\,\lambda(a_{1}\,+\,a_{2}) )\,\cdots\,\pi(\cdots,\,\lambda n).\]Observe that \(\pi(i_{1}\,,...,\,i_{a})\) is the determinant \([C_{i_{1}}\,\cdots\,C_{i_{a}}D_{a+1}\,\cdots\,D_{n}]\), where \(C_{i}\) is the \(i\)th column of the \(n\,\times\,n\) matrix \(\parallel\,X_{ij}\,\parallel\) used in the definition of \(\omega\), and \(D_{i}\) is the column of length \(n\) with \(1\) in the \(i\)th place and \(0\)'s elsewhere. Applying Proposition 5.1 with \(R=\mathbb{Z}[X_{1,1}\,,...,\,X_{n,n}]\) we see that the \(E\)-indexed function \(f\!\in R^{(R^{n})^{E}}\) defined by
+
+\[f(\{C_{i,j}\}_{(i,j)_{aE}})=\operatorname{Alt}(V\mid P_{0})\prod_{i=1}^{s}\,[C (i,1),...,\,C(i,\,n)]\]
+
+(with \(P_{0}\) as in Proposition 5.1) is identically \(0\). Applying this to the map \(C\colon E\!\to R^{n}\) defined by
+
+\[C(i,j) =\,C_{a_{1}+\cdots+a_{i-1}+j} (1\,\leqslant j\leqslant a_{i}),\] \[=\,D_{j} (a_{i}<j\,\leqslant n)\]
+
+we obtain \(\alpha\circ\omega=0\), which completes the proof. (cf. argument in Example 2.2)
+
+_Note._ The same method may be used to extend a number of other determinantal identities of Turnbull [20, p. 45, p. 48] to properties of functions with Young alternation.
+
+**Theorem 5.3**.: _Let \(E\) be the disjoint union of two nonempty subsets \(U\) and \(V\) with \(\#U\geqslant\#V\). Assume \(f\) is alternating in \(U\) and in \(V\). Then \(f\) has Young symmetry from \(V\) to \(U\), if and only if the following condition is satisfied:_
+
+_For every subset of \(E\), with \(\#F=1\,+\,\#U\), we have_
+
+\[\operatorname{Alt}(F\mid\{U,\,V\})f=0. \tag{30}\]
+
+_Proof._ Let the total ordering \(<\) on \(E\) be defined by
+
+\[U=\{J_{1}\,,...,J_{p}\},\qquad V=\{K_{1}\,,...,\,K_{q}\},\] \[\#U=p,\qquad\#V=q,\] \[J_{1}<\cdots<J_{p}<K_{1}<\cdots<K_{q}\,.\]
+
+Consider the left ideal \(\mathscr{Y}\) in \(\mathbb{Z}[S(E)]\) generated by all the following elements:
+
+\[I+(J_{i}J_{j}) (1\,\leqslant\,i<j\leqslant p), \tag{31a}\] \[I+(K_{i}K_{j}) (1\,\leqslant\,i<j\leqslant p),\] (31b) \[\Gamma_{F}=\sum\{(\operatorname{sgn}\lambda)\lambda\colon\lambda \in S(E),\,\lambda\mid F\cap U\text{ and }\lambda\mid F\cap V\text{ increasing}\}\] \[(F\subseteq E,\,\#F=1\,+\,\#U). \tag{31c}\]
+
+Then (30) holds precisely when \(f\) is left annihilated by \(\mathscr{Y}\) and to prove the theorem it suffices to prove
+
+\[\mathscr{Y}=\mathscr{Y}\mathscr{O}(P).\]
+
+[MISSING_PAGE_EMPTY:32]
+
+[MISSING_PAGE_FAIL:33]
+
+**Corollary 3**.: _With the notation of Theorem 3.1, \(\operatorname{Ker}\phi^{*}\) (i.e., if \(R\) is a field, essentially the prime ideal of the flag variety) is generated by the union of the images of all the functions_
+
+\[\Gamma_{p,q,V}=\operatorname{Alt}(V\mid P)\circ\Pi(J_{1},...,J_{p})\;\Pi(K_{1} \;,...,\;K_{q}),\]
+
+_where_
+
+\[n\geqslant p\geqslant q\geqslant 1,\;V\operatorname{\subseteq}\{J_{1}\;,...,\;K_{q}\},\,\#V=p+1,\]
+
+\[P=\{\{J_{1}\;,...,\;J_{q}\},\{K_{1}\;,...,\;K_{q}\}\},\]
+
+_and the common domain of the \(J\)'s and \(K\)'s is \(\{1,...,\;n\}\)._
+
+_Proof._ Applying the special case of Corollary 2 when \(s=2\), we see it is equivalent to say that \(\operatorname{Ker}\phi^{*}\) is generated by the ranges of all
+
+\[\alpha\circ\Pi(J_{1},...,J_{p})\;\Pi(K_{1}\;,...,\;K_{q})\]
+
+with \(n\geqslant p\geqslant q\geqslant 1,\;\;\alpha\in\mathcal{OU}(\{\{J_{1}\;,...,\;J_{p}\},\;\{K_{1}\;,...,\;K_{q}\}\})\); we know this to be the case by Theorem 3.1.
+
+_Note._ The equations of Corollary 3 (but with \(\operatorname{Alt}(V\mid P)\) replaced by \(\operatorname{Alt}(V)\), so that they no longer generate the prime ideal in characteristic \(p\)) are essentially those used by Hodge in [7], and by Hodge and Pedoe in [8], to study the Grassmann and flag manifolds. Hodge acknowledges Turnbull [20] as his source for these in [7, p. 25]; in Turnbull these equations occur in the \(\operatorname{Alt}(V\mid P)\) form
+
+## 6. Relations between the "Quantics" and "Connexes" Constructions
+
+Assume \(V=W^{*}\) and \(W\) are dual finite-dimensional vector spaces over the field \(k\), with cononical pairing denoted by \(\langle,\,\rangle\). Recall that there is induced a duality pairing, which we shall also denote by \(\langle,\,\rangle\), between \(\Lambda^{p}V\) and \(\Lambda^{p}W\), uniquely specified by
+
+\[\langle v_{1}\wedge\cdots\wedge v_{p}\,,\,w_{1}\wedge\cdots\wedge w_{p} \rangle=\det\|\langle v_{i}\,,\,w_{i}\rangle\|\qquad(v\text{'s in }V,\,w\text{'s in }W).\]
+
+Let
+
+\[B=\{e_{1}\;,...,\;e_{n}\},\qquad B^{*}=\{f_{1}\;,...,f_{n}\}\]
+
+be dual \(k\)-bases for \(V\) and \(W\) respectively, so
+
+\[\langle e_{i}\,,f_{j}\rangle=\delta_{ij}\,.\]
+
+The coordinates
+
+\[\Pi(i_{1}\;,...,i_{p})(\omega)\qquad(\text{'s between }1\text{ and }n)\]with respect to \(B\) of an element
+
+\[\omega\,=\,\sum_{p=0}^{n}\,\omega_{p}\qquad(\omega_{p}\in\varLambda^{p}V)\]
+
+in \(\varLambda V\), as described at the beginning of Section 3, are thus given by
+
+\[\varPi(i_{1}\,,...,i_{p})(\omega)\,=\,\langle\omega_{p}\,,f_{i_{1}}\wedge\, \cdots\,\wedge f_{i_{p}}\rangle. \tag{33}\]
+
+The coordinate ring \(k[\text{Flag}(V)]\) of the flag variety of \(V\) is then generated as a \(k\)-algebra by the restrictions
+
+\[\pi(i_{1}\,,...,i_{p})\,=\,\varPi(i_{1}\,,...,i_{p})\mid\text{Flag}(V)\]
+
+of these coordinate functions to the flag variety, again as in Section 3. This algebra possesses the following natural gradation: if
+
+\[n\,\geqslant\,a_{1}\,\geqslant\,\cdots\,\geqslant\,a_{s}>0\]
+
+we define
+
+\[C^{a_{1},....,a_{s}}(V)\,=\,\varLambda^{a_{1},....,a_{s}}W\]
+
+to be the \(k\)-submodule of \(k[\text{Flag}(V)]\) generated by all elements of the form
+
+\[\pi(i_{1,1}\,\cdots\,i_{1,a_{1}})\,\pi(i_{2,1}\,\cdots\,i_{2,a_{2}})\,\cdots\, \pi(i_{s,1}\,\cdots\,i_{s,a_{s}}). \tag{34}\]
+
+Clearly we have
+
+\[k[\text{Flag}(V)]\,=\,k\,\oplus\,\biggl{(}\bigoplus_{n\,\geqslant\,a_{1}, \geqslant\,\cdots\,\geqslant\,a_{s}}C^{a_{1},....,a_{s}}V\biggr{)}.\]
+
+_Note._ In the case \(\text{char}\,\,k=0\), Hodge [7] called expressions of the form (34) (with \(\pi(i_{1}\,,...,\,i_{k})\) interpreted as in Theorem 3.1 rather than as above, which is equivalent to taking \(V=k^{n}\)), "_connexes of type \((b_{1}\,,...,\,b_{t})\)_" (where \(b_{1}+\,\cdots\,+\,b_{t}\) is the partition conjugate to \(a_{1}+\,\cdots\,+\,a_{s}\)), and conjectured a formula for the dimension of the vector space \(C^{a_{1},....a_{s}}(k^{n})\) of these connexes (i.e., a postulation formula for the flag manifold). Littlewood [13] pointed out that this conjecture followed immediately from known results on the representations of \(GL(n)\); indeed, there is a natural action of \(GL(n)\) on \(C^{a_{1},....,a_{s}}(k^{n})\), and in this way one obtains all finite-dimensional irreducible polynomial representations of \(GL(n)\), with no repetitions. G. Higman [5] made the important further observation that, with no assumptions on the characteristic of \(k\), since \(C^{a_{1},....,a_{s}}(V)=\varLambda^{a_{1},....,a_{s}}W\) is a covariant functor of \(W\), there is a (functorial) representation
+
+\[GL(W)\,\to\,GL(\varLambda^{a_{1},....,a_{s}}W),\qquad T\mapsto\varLambda^{a_{ 1},....,a_{s}}T\]
+
+of \(GL(W)\) over \(k\).
+
+[MISSING_PAGE_FAIL:36]
+
+A fortiori, this is still true if instead we take the \(u\)'s and \(v\)'s to have common domain \(W\). Thus, we are led to the following definition.
+
+**Definition 6.1**.: Let \(R\) be a commutative ring with \(1\), and \(W\) an \(R\)-module. By the _shape-algebra_\(\varLambda^{+}W\) of \(W\) will be meant the commutative associative unitary \(R\)-algebra, specified to within unique \(R\)-isomorphism by the three following properties:
+
+1. \(\varLambda^{+}E\) _contains_ \(\varLambda E\) _as a generating_ \(R\)_-submodule._
+2. \(1_{\varLambda E}=1_{\varLambda^{+}E}\) _._
+3. _If_ \(\p\geqslant q>0\)_, the function_ \((X_{\mathbf{1}}\wedge\cdots\wedge X_{\mathbf{p}})\cdot(Y_{\mathbf{1}}\wedge \cdots\wedge Y_{\mathbf{q}})\) _of variables indexed by_ \(\{X_{\mathbf{1}}\,,...,\,Y_{\mathbf{q}}\}\)_, with common domain_ \(W\)_, taking values in_ \(\varLambda^{+}W\)_, has Young symmetry from_ \(\{Y_{\mathbf{1}}\,,...,\,Y_{\mathbf{q}}\}\) _to_ \(\{X_{\mathbf{1}}\,,...,\,X_{\mathbf{p}}\}\) _(where multiplication in_ \(\varLambda^{+}\) _is here indicated by a dot)._
+
+If \(a_{\mathbf{1}}\geqslant\cdots\geqslant a_{s}>0\), then \(\varLambda^{a_{\mathbf{1}},...,a_{s}}W\) will denote the \(R\)-submodule of \(\varLambda^{+}W\) spanned by all
+
+\[(w_{\mathbf{1},\mathbf{1}}\wedge\cdots\wedge w_{\mathbf{1},a_{\mathbf{1}}}) \cdot\cdots\cdot(w_{s,\mathbf{1}}\wedge\cdots\wedge w_{s,a_{\mathbf{q}}}),\]
+
+and an element of \(\varLambda^{a_{\mathbf{1}},...,a_{s}}W\) will be called a _shape in \(W\) of degree \((a_{\mathbf{1}}\,,...,\,a_{s})\)_._
+
+Observe that these \(\varLambda^{a_{\mathbf{1}},...,a_{s}}\) coincide, when \(R=k\) is a field and \(W\) is a finite \(k\)-module, with those of the earlier discussion, while \(\varLambda^{+}W\) is then naturally isomorphic to \(k[\mathrm{Flag}(W^{\star})]\). We note that, if \(\sum_{\mathbf{1}=1}^{s}a_{\mathbf{1}}=n\) and \(e_{\mathbf{1}}\,,...,\,e_{n}\) are linearly independent elements of \(W\), we obtain a representation of \(S_{\mathbf{n}}\) on the subspace
+
+\[k[S_{\mathbf{n}}]\circ(e_{\mathbf{1}}\wedge\cdots\wedge e_{a_{\mathbf{1}}})( e_{a_{\mathbf{1}}+\mathbf{1}}\wedge\cdots\wedge e_{a_{\mathbf{1}}+a_{\mathbf{2}}}) \cdots(\cdots\wedge e_{n})\]
+
+of \(\varLambda^{a_{\mathbf{1}},...,a_{s}}W\) (where \(S_{\mathbf{n}}\) acts by permuting the subscripts); we shall omit here the verification that, if char \(k=0\), we obtain in this way all irreducible representations of \(S_{\mathbf{n}}\) over \(k\) without repetitions (with the character of the above representations of \(S_{\mathbf{n}}\) being \(\chi^{(b_{\mathbf{1}},...,b_{\mathbf{1}})}\) in the notation of [9, p. 67, 70], where \(b_{\mathbf{1}}+\cdots+b_{t}\) is the partition of \(n\) conjugate to \(a_{\mathbf{1}}+\cdots+a_{s}\)).
+
+We next study the relationship between Definition 6.1 and the generalization of the Young-Weyl "quantics" construction given by Carter and Lusztig in [1, p. 211].
+
+If \(W\) is a \(R\)-module over a commutative ring \(R\), and \(a_{\mathbf{1}}\geqslant\cdots\geqslant a_{s}>0\), then Carter and Lusztig define an \(R\)-module which they call the "Weyl module", and denote by \(W^{a_{\mathbf{1}},...,a_{s}}\); in the notation of the present paper, their definition may be stated as follows:
+
+Let \(N=\sum_{\mathbf{i}=1}^{s}a_{\mathbf{i}}\), and let \(P=\{U_{\mathbf{1}}\,,...,\,U_{\mathbf{q}}\}\) denote the partitioning of \(\{1,...,\,N\}\) defined by \(U_{\mathbf{1}}=\{1,...,\,a_{\mathbf{i}}\}\), \(U_{\mathbf{2}}=\{a_{\mathbf{1}}+1,...,\,a_{\mathbf{1}}+a_{\mathbf{2}}\}\), etc., i.e.,\(U_{i}=\{j\colon a_{1}+\cdots+a_{i-1}<j\leqslant a_{1}+\cdots+a_{i}\}\); note that \(\#U_{i}=a_{i}\). Define a left action of \(S_{N}\) (hence \(R[S_{N}]\)) on
+
+\[W^{\otimes N}=W\otimes_{R}W\otimes_{R}\cdots\otimes_{R}W\qquad(N\text{ factors})\]
+
+by
+
+\[\sigma\circ(w_{1}\otimes\cdots\otimes w_{n})=w_{\sigma^{-1}\!\!1}\otimes \cdots\otimes w_{\sigma^{-1}\!\!n}\qquad(w\text{'s in }W,\,\sigma\in S_{N}).\]
+
+Then \(W^{a_{1},\dots,a_{n}}\) is the \(R\)-module consisting of all \(T\in W^{\otimes N}\) with the two following properties:
+
+\[T\text{ is left annihilated by }\mathcal{V}\mathcal{U}(P)\text{ (cf. Definition \ref{eq:T})} \tag{34a}\] \[\text{If }w_{1}^{*},\text{...},w_{N}^{*}\text{ lie in }W^{*}=\operatorname{Hom}_{R}(W,\,R)\text{ and there exist }\] (34b) \[\text{distinct }j,\,k\text{ in the same }U\in P\text{ such that }w_{j}^{*}=w_{k}^{*}\text{, then }\] \[\langle T,w_{1}^{*}\otimes\cdots\otimes w_{n}^{*}\rangle=0\]
+
+(where \(\langle,\,\rangle\) denotes the canonical pairing between \(W^{\otimes n}\) and \((W^{*})^{\otimes n}\)).
+
+_Note._ In [1], condition (34a) is stated in a form which is later noted (p. 2.2, Eq. (31)) to be equivalent in the presence of (34b) to symmetry conditions on \(T\), which in the present language assert that \(T\) is left annihilated by the generators for \(\mathcal{V}\mathcal{U}(P)\) given above in Corollary 3 to Proposition 2.6.
+
+**Proposition 6.1**.: _If \(W\) is a finitely generated free \(R\)-module, there is a natural \(R\)-isomorphism_
+
+\[W^{a_{1},\dots,a_{n}}\approx(A^{a_{1},\dots,a_{n}}W^{*})^{*}.\]
+
+_Proof._ Let \(S\) denote the \(R\)-submodule of \((W^{*})^{\otimes n}\) spanned by those \(w_{1}^{*}\otimes\cdots\otimes w_{n}^{*}\) as in (34b) (i.e., with all \(w^{*}\)'s in \(W^{*}\), and with distinct \(i\) and \(j\) in the same \(U\in P\) such that \(w_{i}^{*}=w_{j}^{*}\)); thus (34b) asserts that \(T\) lies in the orthogonal complement \(S^{\perp}\) of \(S\) in \(W^{\otimes n}\). Note that \(S^{\perp}\) consists of all tensors \(T\) whose representation
+
+\[T=\sum t_{i_{1}\cdots i_{N}}f_{i_{1}}\otimes\cdots\otimes f_{i_{N}}\,,\]
+
+with respect to a basis \((f_{1},\dots,f_{n})\) for \(W\), is such that \(t_{i_{1}\cdots i_{N}}\) is alternating in \(P\) considered as a function of its indices. It follows that \(T\stackrel{{ 1}}{{+}}(j)\) left annihilates \(S^{\perp}\), for all distinct \(i\) and \(j\) in the same \(U\in P\).
+
+If we set
+
+\[A_{i}=a_{1}+\cdots+a_{i-1}\qquad(=0\text{ if }i=1),\]
+
+[MISSING_PAGE_EMPTY:39]
+
+field of characteristic 0, or more generally a \(\mathbb{Q}\)-algebra, there is a natural isomorphism between \(\varLambda^{\mathfrak{a}_{1},\ldots,\mathfrak{a}_{n}}W\) and \(W^{\mathfrak{a}_{1},\ldots,\mathfrak{a}_{n}}\); one may see this, either by a simple computation of characters, or better, by constructing an explicit isomorphism (cf. [18, Sect. 2.5]). This natural isomorphism will be used in the next section to carry over to the graded alternating multiplication of \(V_{+}W\), thus giving \(\varLambda^{+}W\) the double structure in question, in a fashion unique up to multiplication by nonzero rationals.
+
+The precise definition of the algebra
+
+\[V_{+}W=k\,\oplus\left(\bigoplus_{\mathfrak{a}_{1},\cdots,\mathfrak{a}_{n}>0} \,\,V_{\mathfrak{a}_{1},\cdots,\mathfrak{a}_{n}}W\right)\]
+
+must be referred to [18], where it is already-proved (Theorem 2.5) that, when \(W\) is a finitely generated projective \(R\)-module, there is a natural isomorphism
+
+\[V_{\mathfrak{a}_{1},\ldots,\mathfrak{a}_{n}}W\approx(\varLambda^{\mathfrak{b} _{1},\ldots,\mathfrak{b}_{n}}(W^{\star}))^{\star}.\]
+
+Note that this result, together with Proposition 6.1, allows us to identify the functor \(V_{\mathfrak{a}_{1},\ldots,\mathfrak{a}_{n}}W\) defined in [18] with the Carter-Lusztig functor \(W^{\mathfrak{a}_{1},\ldots,\mathfrak{a}_{n}}\) for finitely generated free (or projective) \(R\)-modules \(W\), though not for arbitrary finitely generated \(R\)-modules.
+
+## 7. Extra Structure in the Coordinate Ring of the Flag Manifold
+
+Throughout this section, \(R\) will denote a commutative \(\mathbb{Q}\)-algebra and \(E\) will denote any \(R\)-module. A natural multiplication on \(\varLambda^{+}E\) will be constructed, which extends the wedge product from the sub-\(R\)-module \(\varLambda E\) of \(\varLambda^{+}E\).
+
+### Notation and Terminology
+
+By a _numerical partitioning_ will be meant an 'unordered finite sequence of positive integers," i.e., an equivalence class with respect to the following equivalence relation on finite sequences of positive integers:
+
+\[(\mathfrak{a}_{1},...,\mathfrak{a}_{m})\sim(\mathfrak{b}_{1},...,\mathfrak{ b}_{n})\]
+
+if \(m=n\) and \(\exists\,\,\pi\in S_{n}\) with \(\mathfrak{b}_{i}=\mathfrak{a}_{\pi_{\mathfrak{a}_{i}}}\) for \(1\leq i\leq n\). We denote by \(\langle\mathfrak{a}_{1}\,,...,\mathfrak{a}_{n}\rangle\) the numerical partitioning which is the equivalence class of \((\mathfrak{a}_{1}\,,...,\mathfrak{a}_{n})\). Associated with every partitioning \(P=\{U_{1}\,,...,\,U_{r}\}\) in the sense of Definition 2.5, there is the numerical partitioning \(P=\langle\#U_{1}\,,...,\,\#U_{r}\rangle\).
+
+The functors \(\varLambda^{\mathfrak{a}_{1},\ldots,\mathfrak{a}_{n}}\) and \(V_{\mathfrak{a}_{1},\ldots,\mathfrak{a}_{n}}\) of Section 6 do not depend on the ordering of the \(a\)'s, and so may also be denoted by \(\varLambda^{\mathfrak{a}}\) and \(V_{\mathfrak{a}}\) respectively, where \(\alpha=\langle\mathfrak{a}_{1}\,,...,\mathfrak{a}_{s}\rangle\); this is the notation in [18].
+
+Now let
+
+\[\alpha=\langle a_{1},...,\,a_{s}\rangle,\qquad a_{1}\geq\cdots\geq a_{s}>0 \tag{38}\]
+
+be any partition, and define the _frame_ of \(\alpha\) to be
+
+\[F_{\alpha}=\{(i,j)\colon 1\leq i\leq s,\,1\leq j\leq a_{i}\}.\]
+
+Assume the dual partiton to \(\alpha\) is given by
+
+\[\alpha^{*}=\langle\bar{a}_{1},...,\,\bar{a}_{\bar{I}}\rangle,\,\bar{a}_{\bar{1 }}\geq\cdots\geq\bar{a}_{\bar{I}}>0, \tag{39}\]
+
+so that
+
+\[F_{\alpha^{*}}=\{(i,j)\colon(j,i)\in F_{\alpha}\}.\]
+
+There is a natural partitioning \(P_{\alpha}\) of the frame \(F_{\alpha}\) into the disjoint sets \(U_{1}\),..., \(U_{\alpha}\) with
+
+\[U_{i}=\{(i,\,1),...,\,(i,\,a_{i})\}\]
+
+and \(|\,P_{\alpha}\,|=\alpha.\) If we order these sets \(U_{i}\) in the obvious way:
+
+\[(i,\,1)\stackrel{{\cdot}}{{<}}\cdots\,<(i,\,a_{i})\]
+
+we may construct as in Definition 4.2 the two elements
+
+\[YA(\alpha)=YA((P_{\alpha})_{<})=\operatorname{Alt}(P_{\alpha})\operatorname{ Sym}((P_{\alpha})_{<}^{*})\]
+
+and
+
+\[YS(\alpha)=YS((P_{\alpha})_{<})=\operatorname{Sym}(P_{\alpha})\operatorname{ Alt}((P_{\alpha})_{<}^{*})\]
+
+in the symmetric group algebra \(R[S(F_{\alpha})].\) It is well known there exists a positive integer \(H(\alpha)\) (given by the "hookproduct Rule," cf. [4]) such that
+
+\[[YS(\alpha)]^{2}=H(\alpha)\,\,YS(\alpha),\qquad[YA(\alpha)]^{2}=H(\alpha)\,\,YA (\alpha). \tag{40}\]
+
+We shall denote by \(\omega^{\alpha}\) the \(F_{\alpha}\)-indexed function
+
+\[\omega^{\alpha}(\{e_{ij}\})=\prod_{i=1}^{s}\,(e_{i,1}\wedge\,\cdots\wedge e_{ i,a_{i}})\]
+
+with common domain \(E\) taking values in \(A_{R}{}^{\alpha}E,\) and similarly denote by \(\theta_{\alpha}\) the \(F_{\alpha}\)-indexed function
+
+\[(e_{11}\circ\cdots\circ e_{1,a_{1}})\wedge\,\cdots\wedge(e_{s,1}\circ\cdots \circ e_{s,a_{s}})\]
+
+with common domain \(E\) taking values in \(V_{\alpha}E.\) Note that \(\omega^{\alpha}\) has Young alternation, and \(\theta_{\alpha}\) has Young symmetry, in the partitioning \(P_{\alpha}\) (cf. Definition 2.5).
+
+Let \(D\) and \(T\) be \(R\)-modules, \(M\) a set, and \(f\) an \(M\)-indexed function with common domain \(D\) taking values in \(T\); then \(f\) will be called \(R\)-_multilinear_ provided it satisfies the following condition:
+
+\[f(F)=r_{1}f(F_{1})+r_{2}f(F_{2})\]
+
+whenever \(r_{1}\) and \(r_{2}\) are in \(R\), and \(F,F_{1}\), \(F_{2}\) are maps \(M\to D\) which coincide at all elements of \(M\) except possibly \(m_{0}\), where \(F(m_{0})=r_{1}F_{1}(m_{0})+r_{2}F_{2}(m_{0})\).
+
+For example, the \(F_{a}\)-indexed functions \(\omega^{a}\) and \(\theta_{a}\) defined above, are \(R\)-multilinear.
+
+If \(M\) is any set and \(D\) is any \(R\)-module, we denote by \(D^{\otimes M}\) the universal target of all \(M\)-indexed \(R\)-multilinear maps with common domain \(D\). (For our purposes, it is important to have the notation, which unlike the usual one does not assume an ordering on \(M\).) In more detail:
+
+(i) There is an \(R\)-mutilinear \(M\)-indexed map \(\otimes_{M}\) with common domain \(D\) taking values in \(D^{\otimes M}\), which assigns to each map \(\{d_{M}\}_{m\in M}\) from \(M\) to \(D\) the element \(\otimes_{m\in M}d_{m}\in D^{\otimes M}\).
+
+(ii) For each \(R\)-multilinear \(M\)-indexed function \(f\) with common domain \(M\) taking values in any \(R\)-module \(T\), there is a unique \(R\)-homomorphism
+
+\[\tilde{f}\colon D^{\otimes M}\to T\]
+
+such that
+
+\[f(\{d_{a}\}_{a\in M})=\tilde{f}(\otimes_{m\in M}d_{m}). \tag{41}\]
+
+Note finally that there is a natural left action of \(S(M)\) on \(R\)-homomorphisms \(D^{\otimes M}\to T\), which is compatible via (41) with the left action of \(S(M)\) on \(M\)-indexed functions; these extend to left actions of \(R[S(M)]\).
+
+### Construction of the Wedge Product on \(\varLambda^{+}E\)
+
+**Proposition 7.1**: _Let \(D\), \(T\) be modules over the commutative \(\mathbb{Q}\)-algebra \(R\), and let \(\alpha\) be any partition; let_
+
+\[f\in T^{(D^{F_{\alpha}})}\]
+
+_be an \(F_{a}\)-indexed \(R\)-multilinear function, with common domain \(D\), taking values in \(T\)._
+
+_Then \(YA(\alpha)\circ f\) and \(YS(\alpha)\circ f\) factor through \(\omega^{a}\) and \(\theta_{\alpha}\), respectively, that is, there exist unique \(R\)-homomorphisms_
+
+\[f^{\alpha}\colon\varLambda^{a}D\to T\qquad\text{and}\qquad f_{a}\colon V_{a}D\to T\]
+
+_such that_
+
+\[YA(\alpha)\circ f=f^{a}\circ\omega^{a},\qquad YS(\alpha)\circ f_{a}=f_{a} \circ\theta_{a}\]
+
+[MISSING_PAGE_EMPTY:43]
+
+_Proof of Proposition 7.2._ Since \(\theta_{a^{*}}\) is symmetric in the partitioning \(P_{a^{*}}\) of \(F_{a^{*}}\), we have
+
+\[n_{1}(RHS\text{ of }(\ref{eq:n1}))\,=\,YA(\alpha)\circ\tau_{a^{*}}\circ\theta_{a^{*}}\,,\]
+
+where
+
+\[n_{1}=\prod_{i=1}^{s}(\bar{a}_{i})!\]
+
+and similarly
+
+\[n_{2}(RHS\text{ of }(\ref{eq:n1}))\,=\,YS(\alpha)\circ\tau_{a}\circ\omega_{a}\,,\]
+
+where
+
+\[n_{2}=\prod_{i=1}^{s}(a_{i})!.\]
+
+The existence of \(R\)-homomorphisms \(\delta^{a},\delta_{a^{*}}\) satisfying (42) and (43) is thus guaranteed by Proposition 4.1.
+
+We have
+
+\[\delta_{a}\circ\delta_{a^{*}}\circ\omega^{a}\,=\,\text{Alt}(P_{a})\,\text{Sym }((P_{a})_{<}^{\pm})\,\omega^{a}\,=\,YA(\omega^{a})\]
+
+which equals \(H(\alpha)\omega^{a}\) by the remark following Theorem 4.1 and the fact that \(\omega^{a}\) has Young alternation in \(P_{a}\). This proves the first half of (44), and the proof of the second half is similar. Hence \(\delta^{a}\) and \(\delta_{a^{*}}\) are \(R\)-isomorphisms, as asserted.
+
+_Remarks._ This \(\varLambda\) operation
+
+\[\varLambda_{a,B}\colon\varLambda^{a}\otimes\varLambda^{B}\to\varLambda^{r} \qquad(\gamma=(a^{*}+\beta^{*})^{*}) \tag{45}\]
+
+is essentially unique, in the sense that if \(R=\mathbb{C}\), the multiplicity of the representation \([\gamma]\) associated with \(\varLambda^{r}\), in \([\alpha]\otimes[\beta]\) is \(1\), so all natural transformations (45) coincide to within scalar multiples.
+
+## Appendix 1
+
+Throughout this appendix, we shall assume that
+
+\[\alpha=\langle a_{1}\,,...,\,a_{s}\rangle,\qquad a_{1}\,\geqslant\,\cdots\, \geqslant\,a_{s}>0,\]
+
+is a partition, with dual partition
+
+\[\beta=\langle b_{1}\,,...,\,b_{t}\rangle,\qquad b_{1}\,\geqslant\,\cdots\, \geqslant\,b_{t}>0.\]
+
+By the _Young frame_ of type \(\alpha\) will be meant the set
+
+\[F_{a}=\langle(i,j)\colon 1\,\leqslant\,i\,\leqslant\,s,\,1\,\leqslant\,j\, \leqslant\,Q_{i}\rangle.\]We shall refer to the set
+
+\[\{(i,\,1),...,(i,\,a_{i})\}\qquad(1\leq i\leq s)\]
+
+as the \(i\)th _row of \(F_{\alpha}\)_, and to the set
+
+\[\{(1,j),...,(b_{j}\,j)\}\qquad(1\leq j\leq t)\]
+
+as the \(j\)th _column_ of \(F_{\alpha}\). By a _tableau_ (or _Young tableau_) _of type \(\alpha\) over a set \(B\)_ will be meant a map \(T\colon F_{\alpha}\to B\); we then refer to \(T(i,j)\) as the _entry in box \((i,j)\) of \(T\)_.
+
+There is a _left_ action of \(S(F_{\alpha})\) on tableaux of type \(\alpha\) over \(B\), defined by
+
+\[(\pi T)(i,j)\eqqcolon T(\pi^{-1}(i,j)).\]
+
+_Note._ This action on tableaux is that employed in [22] with \(\pi T\) obtained from \(T\) by moving the \(T\)-entry in each box \(B\) of \(F_{\alpha}\) into the box \(\pi B\).
+
+If \(<\) is a total ordering on \(B\), there is associated the usual lexicographical ordering \(<_{t}\) on \(F_{\alpha}\), defined by \((i,j)<_{t}(i_{1}\,j_{j})\Leftrightarrow\)_Either_\(i<i_{1}\)_or_\(i=i_{1}\), \(j<j_{1}\). Also, we associate to each tableau \(T\) of type \(\alpha\) over \(B\) the sequence
+
+\[T(1,\,1),...,\,T(1,\,a_{1}),\,T(2,\,1),...,\,T(2,\,a_{2}),...,\,T(s,\,a_{s})\]
+
+and let \(<_{p}\) denote the total ordering on the set of such tableaux \(T\), obtained by ordering their associated sequences. In other words, \(T<_{p}T^{\prime}\) means, \(\exists(i,j)\) in \(F_{\alpha}\) such that
+
+\[\begin{array}{ll}(1)&T(i,j)<T^{\prime}(i,j).\\ (2)&\mbox{If }(i_{1}\,j_{1})<_{t}(i,j)\mbox{ then }T(i_{1}\,j_{1})=T^{\prime}(i_{1}\,j_{1}). \end{array}\]
+
+Associated with the partition \(\alpha\) we have the two following subgroups of \(S(F_{\alpha})\): \(\mbox{Row}\,(\alpha)=\mbox{set of permutations which preserve the rows of}\)
+
+\[F_{\alpha}=\{\pi\in S(F_{\alpha})\colon\pi(i,j)=(i^{\prime},j^{\prime}) \eqqcolon i=i^{\prime}\},\]
+
+and similarly
+
+\[\mbox{Col}(\alpha)=\{\pi\in F_{\alpha}\colon\pi(i,j)=(i^{\prime},j^{\prime}) \eqqcolon j=j^{\prime}\}.\]
+
+One final definition, and we shall be ready to state the proposition: A tableau \(T\) of type \(\alpha\) over the ordered set \(B\) is _row-strict standard_ if it has the two following properties:
+
+\[\begin{array}{ll}(\mbox{A})&T(i,\,1)<T(i,\,2)<\cdots<T(i,\,a_{i})\ (1\leq i \leq s);\mbox{ i.e., }T\mbox{ is strictly increasing in each row of }F.\\ \end{array}\]
+
+\[\begin{array}{ll}(\mbox{B})&T(1,j)\leq T(2,j)\leq\cdots\leq T(b_{j}\,j)\,(1\leq j\leq t);\mbox{ i.e., }T\mbox{ is nondecreasing in each column of }F.\end{array}\]
+
+**Proposition A**.: _Let \((B,<)\) be a totally ordered set and let \(T\) be a row-strict standard tableau of type \(\alpha\) over \(B.\) Let_
+
+\[\sigma\in\operatorname{Row}\,(\alpha),\qquad\pi\in\operatorname{Col}\,(\alpha);\]
+
+_then \(T\ll_{p}\sigma\pi T\), and if equality holds then \(\sigma\) is the identity permutation._
+
+_Proof_. Set
+
+\[(1)\qquad T^{\prime}=\sigma\pi T.\]
+
+Since \(\pi\in\operatorname{Col}(\alpha)\), there exists for \(1\,\leq\,j\,\leq\,t\) a unique \(\pi_{j}\in S(b_{j})\) such that
+
+\[(2)\qquad\pi(i,j)\,\stackrel{{\cdot}}{{=}}\,(\pi_{j}i,j),\qquad \text{all }(i,j)\in F_{\alpha}\,.\]
+
+We next modify \(\pi\), by means of the following considerations.
+
+By an _entry-column for_\(T\) will be meant a nonempty subset \(C_{j,1}\) of the \(j\)th column of \(F_{\alpha}\) of the form
+
+\[C_{j,1}\,\stackrel{{\cdot}}{{=}}\,\{(i,j)\in F_{\alpha}\colon\,T (i,j)\,=\,I\}\]
+
+(i.e., \(C_{j,1}\) is the set of boxes in the \(j\)th column of \(F_{\alpha}\) whose \(T\)-entries have a given value \(l\) which actually occurs in that column of \(T.\)) Clearly, \(F_{\alpha}\) is the disjoint union of these \(C_{j,1}\).
+
+If \(\pi\), \(\pi^{\prime}\in\operatorname{Col}(\alpha)\) then
+
+\[\pi\cdot T=\pi^{\prime}\cdot T\]
+
+holds, if and only if \(\pi C=\pi^{\prime}C\) for every entry-column \(C\) for \(T.\) (This is because \(\pi C_{j,1}\) is precisely the set of all boxes in the \(j\)th column, whose entry in \(\pi T\) is \(l.\)) Thus, given \(\pi\in\operatorname{Col}(\alpha)\), the most general \(\pi^{\prime}\in\operatorname{Col}(\alpha)\) with \(\pi T=\pi^{\prime}T\) is obtained by picking arbitrary bijections
+
+\[\pi^{\prime}_{j,1}\colon\,C_{j,1}\to\pi(C_{j,1})\]
+
+and piecing them together to a permutation \(\pi^{\prime}\) of \(\varSigma_{\alpha}\). Among all such \(\pi^{\prime}\) there is a unique one, which we may without loss of generality assume to be \(\pi\) itself, satisfying the following condition:
+
+For all entry columns \(C_{j,1}\) for \(T\), the map
+
+\[\pi\mid C_{j,1}\colon\,C_{j,1}\to\pi(C_{j,1})\]
+
+between subsets of the \(j\)th column of \(\varSigma_{\alpha}\), is order-preserving with respect to the vertical ordering
+
+\[(1,j)\,<\,\cdots\,<\,(b_{j}\,,j)\]
+
+for that column; equivalently:
+
+\[(3)\qquad\text{If }T(i,j)\,=\,T(i^{\prime},j)\text{ and }i<i^{\prime}\text{ then }\pi_{j}i <\pi_{j}i^{\prime}.\]For the remainder of this proof, it will be assumed that \(\pi\) satisfies (3).
+
+We next prove the following consequence of this normalization of \(\pi\):
+
+_Claim._ If \((i,j)\in F_{\alpha}\), and if \(T\) and \(T^{\prime}\) coincide on all boxes of \(F_{\alpha}\) which precede \((i,j)\) in the lexicographic ordering \(<_{t}\) defined above, then both the following statements hold:
+
+* Both \(\sigma\) and \(\pi\) fix all boxes \(<_{t}(i,j)\)
+* _Either_\(\sigma\) and \(\pi\) fix \((i,j)\) (whence \(T(i,j)=T^{\prime}(i,j)\) by (1)), _or_\(T(i,j)<T^{\prime}(i,j)\)
+
+_Remark._ Both the hypothesis of this claim, and (i), are vacuously satisfied if \((i,j)=(1,\,1)\); the general argument below for proving (ii) works in this case also.
+
+_Proof of claim._ We argue by induction on the ordering \(<_{t}\) of \(\varSigma_{a}\); i.e., we assume the claim holds for all boxes \(<_{t}(i,j)\).
+
+If \((i,j)\neq(1,\,1)\) then \((i,j)\) has an immediate predecessor, say \((i^{\prime},j^{\prime})\), in the ordering \(<_{t}\). Applying the induction hypothesis to \((i^{\prime},j^{\prime})\) we obtain:
+
+* \(\pi\) and \(\sigma\) fix all boxes \(<_{t}(i^{\prime},j^{\prime})\).
+* Since \(T(i^{\prime},j^{\prime})=T^{\prime}(i^{\prime},j^{\prime})\), \(\pi\) and \(\sigma\) fix \((i^{\prime},j^{\prime})\).
+
+The preceding two statements clearly imply (i) holds for \((i,j)\) (if \((i,j)\neq(1,\,1)\);
+
+(i) holds vacuously if \((i,j)=(1,\,1)\)).
+
+We next prove (ii). Let
+
+\[(4)\qquad\sigma^{-1}(i,j)=(i,\,q),\qquad\pi^{-1}(i,\,q)=(\,p,\,q)\]
+
+whence
+
+\[T^{\prime}(i,j)=(\sigma^{-1}T^{\prime})(i,\,q)=(\pi T)(i,\,q)=T(p,\,q)\]
+
+Since we now know (i) holds, we have:
+
+\[\sigma(i,j^{\prime})=(i,j^{\prime})\ \mbox{if}\ j^{\prime}<j;\qquad\pi(i^{ \prime},\,q)=(i^{\prime},\,q)\ \mbox{if}\ i^{\prime}<i\]
+
+which with (4) implies
+
+\[(5)\qquad p\geq i,\qquad q\geq j.\]
+
+Since \(T\) is row-strict standard, it follows that
+
+\[(6)\qquad T(i,j)\leq T(i,\,q)\leq T(p,\,q)=T^{\prime}(i,j).\]
+
+If \(\sigma\) does not fix \((i,j)\) then, by (4),
+
+\[q>j\qquad\mbox{whence $T(i,j)<T(i,\,q)\leq T^{\prime}(i,j)$}\]
+
+(using (6) and the fact \(T\) is row-strict standard); i.e., (ii) holds in the case.
+
+Thus, to complete the proof of the claim, it suffices to prove (ii) under the assumption that
+
+\[T(i,j)\,\geqslant\,T^{\prime}(i,j).\]
+
+Indeed, it then follows from (6) that \(T(i,j)\,=\,T^{\prime}(i,j)\), so by what has just been shown, \(\sigma\) fixes \((i,j)\); then (4) shows \(j\,=\,q\), so (4) and (6) become
+
+\[T(i,j)\,=\,T(p,j)\,=\,T^{\prime}(i,j),\,\pi(p,j)\,=(i,j);\qquad\mbox{i.e., $i =\pi_{j}p$.}\]
+
+Hence, \((i,j)\) and \((p,j)\) lie in the same entry-column for \(T\). This shows \(p=i\), for otherwise by (5) we would have \(p>i\) which by (3) and (7) would imply \(i=\pi_{j}p>\pi_{j}i\), whence
+
+\[\pi(i,j)\,=\,(i^{\prime},j)\qquad\mbox{with}\quad i^{\prime}\,<\,i\]
+
+which contradicts (i) (which has been proved to hold for \((i,j)\)). This completes the induction, and so proves the preceding claim.
+
+We may now readily complete the proof of Proposition A, as follows. In the first place, if \(T=\,T^{\prime}\), then the claim, applied to the last box \((s,\,a_{s})\) of \(F_{s}\), shows that \(\sigma=I\). On the other hand, if \(T\neq T^{\prime}\), pick the \(<_{t}\) earliest box \((i,j)\) of \(F_{s}\) for which \(T\) and \(T^{\prime}\) differ; the claim then shows that \(T(i,j)\,<\,T^{\prime}(i,j)\) whence \(T\,<_{p}\,T^{\prime}\). Q.E.D.
+
+## Acknowledgments
+
+Thanks are due the National Science Foundation for supporting the author as a Visiting Scholar at Harvard during the academic year 1974-1975, when these ideas were first developed, and to the Mathematics Department at Harvard for extending their hospitality during that time.
+
+## References
+
+* [1]R. W. Carter and G. Lusztig, On the modular representations of the general linear and symmetric groups, _Math. Z._ 136 (1974), 193-242.
+* [2]D. B. A. Epstein, Group representations and functors, _Amer. J. Math._ 91 (1969), 395-414.
+* [3]V. Fock, _Sov. JETP_ 10 (1940), 961.
+* [4]J. S. Frame, G. de B. Robinson, and R. M. Thrall, The hookgraphs of the symmetric groups, _Canad. J. Math._ 6 (1954), 316-323.
+* [5]G. Higman, Representations of general linear groups and varieties of \(p\)-groups, _in_ "Proc. Internat. Conf. Theory of Groups, Austral. Nat. Univ. Canberra, Aug. 1965," pp. 167-173, Gordon & Breach, New York, 1967.
+* [6]W. V. D. Hodge, A note on connexes, _Proc. Cambridge Philos. Soc._ 38 (1942), 129-143.
+* [7]W. V. D. Hodge, Some enumerative results in the theory of forms, _Proc. Cambridge Philos. Soc._ 39 (1943), 22-30.
+
+* [8]W. V. D. Hodge and D. Pedore, "Methods of Algebraic Geometry," Vol. II, Cambridge Univ. Press, London/New York, 1952.
+* [9]G. D. James, A characteristic-free approach to the representation theory of \(\overline{\mathbb{G}}_{\mathfrak{n}}\), J. Algebra **46** (1977), 430-450.
+* [10]S. L. Kleiman and D. Laksov, Schubert calculus, _Amer. Math. Monthly **79**_ (1972), 1061-1082.
+* [11]G. Lancaster and J. Towber, Representation-functors and flag-algebras for the classical groups I, _J. Algebra **59**_ (1979), 16-39; II, _J. Algebra_, in press.
+* [12]A. Lascoux, thesis (unpublished).
+* [13]D. E. Littlewood, On the number of terms in a simple algebraic form, _Proc. Cambridge Philos. Soc. **39**_ (1942), 394-396.
+* [14]D. E. Littlewood, "The Theory of Group Characters," 2nd ed., Oxford Univ. Press (Clarendon), London, 1950.
+* [15]A. Lukevicius, Representation rings of the symmetric groups--a Hopf algebra approach, Aarhus Univ. preprint series No. 29, 1975.
+* [16]C. Musili, Postulation formula for Schubert varieties, _J. Indian Math. Soc. **36**_ (1972), 143-171.
+* [17]J. J. Sylvester, _Phil. Mag. **4**, No. II (1851), 142-145.
+* [18]J. Towber, Two new functors from modules to algebras, _J. Algebra **47**_ (1977), 80-104.
+* [19]J. Towber, Young alternation and the flag-manifold, _in_ "Proceedings of Young Day Conference, University of Waterloo, June 2, 1978."
+* [20]H. W. Turnbull, "The Theory of Determinants, Matrices and Invariants, Blackie, London/Glasgow, 1929.
+* [21]B. L. van der Waerden, "Einfuhrung in die Algebraische Geometrie," Berlin, 1939.
+* [22]H. Weyl, "The Classical Groups, Their Invariants and Representations," Princeton Univ. Press, Princeton, N. J., 1946.
+* [23]A. Young, On quantitative substitutional analysis (second paper), _Proc. London Math. Soc. (1) **34**_ (1902), 261-397.
+* [24]A. Young, On quantitative substitutional analysis (third paper), _Proc. London Math. Soc. (2) **28**_ (1927), 255-292.

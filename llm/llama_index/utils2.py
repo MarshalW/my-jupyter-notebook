@@ -17,12 +17,12 @@ def get_llm(model="qwen2-7b-6k",temperature=0.1):
                  api_base="http://192.168.0.72:3000/v1", 
                  api_key="sk-bJP6QSnUfjAYeYeE505d3eBf63A643BeB0B8E350Df9b7750",
                  is_chat_model=True,
-                 temperature=0.1,
+                 temperature=temperature,
                  request_timeout=60.0
                 )
     return llm
 
-def get_embedding(model_name="chatfire/bge-m3:q8_0"):
+def get_embedding(model_name="quentinz/bge-large-zh-v1.5"): # "chatfire/bge-m3:q8_0" -- 不好用
     ollama_embedding = OllamaEmbedding(
         # model_name="dztech/bge-large-zh:v1.5",
         # model_name="bge-m3:latest",

@@ -21,3 +21,4 @@ llm/nn/data
 
 __pycache__
 
+llm/llmperf/llmperf

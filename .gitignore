@@ -21,4 +21,6 @@ llm/nn/data
 
 __pycache__
 
-llm/llmperf/llmperf
+llm/llmperf/llmperf 
+llm/chattts/chatTTS
+.ipynb_checkpoints
